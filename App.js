@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StatusBar, StyleSheet } from 'react-native';
+import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth'
+import db from '@react-native-firebase/database'
+import 'expo-dev-client';
 
 const LoginForm = () => {
     const [email, setEmail] = useState("");
@@ -8,6 +11,29 @@ const LoginForm = () => {
     const [passwordError, setPasswordError] = useState("");
 
     const loginClick = () => {
+        // Implement your login logic here
+        // For example, you can validate the email and password
+        // and perform the login action accordingly
+    };
+
+    const createuser = async (response) => {
+        db().ref('/users/${response.user.id}').set({email})
+
+    };
+    const createAccountClick = async () => {
+        if (email && password){
+            try {
+                const response = await auth().createUserWithEmailAndPassword(email, password);
+                if (response.user) {
+                    await createProfile(response);
+
+                }
+            }
+        
+            catch (e){
+                Alert.alert("bruh?!");
+            }
+        }
         // Implement your login logic here
         // For example, you can validate the email and password
         // and perform the login action accordingly
@@ -43,7 +69,17 @@ const LoginForm = () => {
                     onPress={loginClick}
                     style={styles.inputButton}
                 />
+                
             </View>
+
+            <View style={styles.inputContainer}>
+                <Button
+                    title="Create Account"
+                    onPress={createAccountClick}
+                    style={styles.inputButton}
+                />
+             </View>
+
         </View>
     );
 };

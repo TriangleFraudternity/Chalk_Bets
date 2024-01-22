@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "761565960474",
+    "firebase_url": "https://chalkbets-1bf48-default-rtdb.firebaseio.com",
+    "project_id": "chalkbets-1bf48",
+    "storage_bucket": "chalkbets-1bf48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:761565960474:android:f394d6e66329de3d0eb4a3",
+        "android_client_info": {
+          "package_name": "com.fraudternity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNzE5lZGvZmO8zaz5tlJWFoYm5vHEmePE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
