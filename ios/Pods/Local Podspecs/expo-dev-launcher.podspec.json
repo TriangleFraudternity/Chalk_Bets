@@ -1,0 +1,119 @@
+{
+  "name": "expo-dev-launcher",
+  "version": "3.6.3",
+  "summary": "Pre-release version of the Expo development launcher package for testing.",
+  "description": "Pre-release version of the Expo development launcher package for testing.",
+  "license": "MIT",
+  "authors": "650 Industries, Inc.",
+  "homepage": "https://docs.expo.dev",
+  "platforms": {
+    "ios": "13.4"
+  },
+  "swift_versions": "5.2",
+  "source": {
+    "git": "https://github.com/github_account/expo-development-client.git",
+    "tag": "3.6.3"
+  },
+  "static_framework": true,
+  "source_files": "ios/**/*.{h,m,mm,swift,cpp}",
+  "preserve_paths": "ios/**/*.{h,m,mm,swift}",
+  "exclude_files": [
+    "ios/Unsafe/**/*.{h,m,mm,swift,cpp}",
+    "ios/Tests/**/*.{h,m,swift}"
+  ],
+  "requires_arc": true,
+  "header_dir": "EXDevLauncher",
+  "resource_bundles": {
+    "EXDevLauncher": [
+      "ios/assets",
+      "ios/main.jsbundle",
+      "ios/Views/EXDevLauncherErrorView.storyboard"
+    ]
+  },
+  "xcconfig": {
+    "GCC_PREPROCESSOR_DEFINITIONS": "EX_DEV_LAUNCHER_VERSION=3.6.3",
+    "OTHER_CFLAGS": "$(inherited)"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "OTHER_CFLAGS[config=Debug]": "$(inherited)",
+    "OTHER_SWIFT_FLAGS[config=Debug]": "$(inherited) -DEX_DEV_CLIENT_NETWORK_INSPECTOR",
+    "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/Headers/Private/React-Core\" \"${PODS_ROOT}/Headers/Public/RNReanimated\" \"$(PODS_CONFIGURATION_BUILD_DIR)/EXManifests/Swift Compatibility Header\" \"$(PODS_CONFIGURATION_BUILD_DIR)/EXUpdatesInterface/Swift Compatibility Header\" \"$(PODS_ROOT)/boost\" \"$(PODS_ROOT)/Headers/Private/Yoga\"",
+    "FRAMEWORK_SEARCH_PATHS": "\"${PODS_CONFIGURATION_BUILD_DIR}/RNReanimated\"",
+    "CLANG_CXX_LANGUAGE_STANDARD": "c++20"
+  },
+  "user_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": "\"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-launcher/Swift Compatibility Header\""
+  },
+  "dependencies": {
+    "React-Core": [
+
+    ],
+    "React-RCTAppDelegate": [
+
+    ],
+    "expo-dev-menu-interface": [
+
+    ],
+    "EXManifests": [
+
+    ],
+    "EXUpdatesInterface": [
+
+    ],
+    "expo-dev-menu": [
+
+    ],
+    "ExpoModulesCore": [
+
+    ],
+    "RCT-Folly": [
+      "2022.05.16.00"
+    ],
+    "glog": [
+
+    ]
+  },
+  "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32",
+  "default_subspecs": "Main",
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "ios/Tests/**/*.{h,m,mm,swift}",
+      "dependencies": {
+        "Quick": [
+
+        ],
+        "Nimble": [
+
+        ],
+        "React-CoreModules": [
+
+        ],
+        "OHHTTPStubs": [
+
+        ],
+        "ExpoModulesTestCore": [
+
+        ]
+      }
+    }
+  ],
+  "subspecs": [
+    {
+      "name": "Unsafe",
+      "source_files": "ios/Unsafe/**/*.{h,m,mm,swift,cpp}",
+      "compiler_flags": "-x objective-c++ -std=c++20 -fno-objc-arc"
+    },
+    {
+      "name": "Main",
+      "dependencies": {
+        "expo-dev-launcher/Unsafe": [
+
+        ]
+      }
+    }
+  ],
+  "swift_version": "5.2"
+}
