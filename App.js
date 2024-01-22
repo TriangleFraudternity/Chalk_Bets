@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StatusBar, StyleSheet } from 'react-native';
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+
+import {auth} from './config/firebase.js';
+
 
 const LoginForm = () => {
     const [email, setEmail] = useState("");
@@ -11,7 +15,22 @@ const LoginForm = () => {
         // Implement your login logic here
         // For example, you can validate the email and password
         // and perform the login action accordingly
+        createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+    });
     };
+
+    //const auth = getAuth();
+    
+
 
     return (
         <View style={styles.container}>
