@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 
-import {auth} from './config/firebase.js';
+import {auth} from '../config/firebase.js';
 
 const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState('');
@@ -16,7 +16,7 @@ const SignUpScreen = ({ navigation }) => {
     // You can send the data to your backend or store it locally, depending on your needs
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-          // Signed up 
+          // Signed up
           const user = userCredential.user;
           // ...
       })
@@ -24,7 +24,7 @@ const SignUpScreen = ({ navigation }) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           // ..
-      
+
     });
 
     // For simplicity, let's just log the profile data for now

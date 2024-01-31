@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 import {signInWithEmailAndPassword} from "firebase/auth";
-
-import {auth} from './config/firebase.js';
+import {auth} from '../config/firebase.js';
 
 
 const LoginScreen = ({ navigation }) => {
@@ -13,11 +12,16 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
+
+    // For simplicity, let's just log the email and password for now
+    console.log('Email:', email);
+    console.log('Password:', password);
+
     // Add logic to authenticate the user
     // You can send the login credentials to your backend for validation
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Signed in 
+            // Signed in
             const user = userCredential.user;
             // ...
         })
@@ -25,10 +29,6 @@ const LoginScreen = ({ navigation }) => {
             const errorCode = error.code;
             const errorMessage = error.message;
     });
-
-    // For simplicity, let's just log the email and password for now
-    console.log('Email:', email);
-    console.log('Password:', password);
 
     // Navigate to the next screen (you can replace 'HomeScreen' with your desired screen)
     navigation.navigate('HomeScreen');
@@ -54,7 +54,8 @@ const LoginScreen = ({ navigation }) => {
         secureTextEntry
       />
 
-      <Button title="Login" onPress={handleLogin} />
+      <Button title="Login"
+              onPress={() => navigation.navigate('HomeScreen')}/>
 
       <Text style={styles.signupText}>
         Don't have an account?{' '}
