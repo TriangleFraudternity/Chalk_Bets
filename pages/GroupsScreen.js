@@ -3,12 +3,12 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 // Create a functional component for the page
-const HomeScreen = () => {
+const GroupsScreen = () => {
   return (
     // Use the View component as a container
     <View style={styles.container}>
       {/* Display a text element */}
-      <Text style={styles.text}>Home Screen</Text>
+      <Text style={styles.text}>Groups Page</Text>
     </View>
   );
 };
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
 });
 
 // Export the component for use in other parts of the application
-export default HomeScreen;
+export default GroupsScreen;
