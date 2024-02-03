@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+import { View } from 'react-native';
 import GroupsScreen from '../pages/GroupsScreen.js'
 import SettingsScreen from '../pages/SettingsScreen.js'
 import LoginScreen from '../pages/LoginScreen.js'
@@ -14,27 +15,72 @@ const Tab = createBottomTabNavigator();
 
 function LandingPage() {
     return (
-    <Tab.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
-        <Tab.Screen
-            name = "Home"
-            component = {HomeScreen}
-            options = {{title: 'Home Page' ,
-                tabBarIcon:({size,color})=>(
-                    <MaterialCommunityIcons name="home"
-                    size={size} color={color}/>
-            )
+    <Tab.Navigator 
+    initialRouteName="Home" 
+    screenOptions={{
+        headerShown: false,
+        tabBarShowLabel: false,
+        tabBarStyle: {
+            borderTopWidth: 0,
+            backgroundColor: 'transparent'
+            },
         }}
-     />
+    >
+    <Tab.Screen
+        name = "Home"
+        component = {HomeScreen}
+        options = {{
+            title: 'Home Page',
+            tabBarLabel: 'Home',
+            tabBarIcon:({size,color}) => (
+                <MaterialCommunityIcons name="home"
+                size={size} color={color}/>
+            ),
+            tabBarActiveTintColor: '#ff5722',
+            tabBarActiveBackgroundColor: '#990033',
+            tabBarInactiveBackgroundColor: '#999999',
+            tabBarInactiveTintColor: '#FFFFFF'
+        }}
+    />
     <Tab.Screen
         name = "Groups"
         component = {GroupsScreen}
-        options = {{title: 'Groups Page' ,
+        options = {{
+            title: 'Groups Page',
             tabBarIcon:({size,color})=>(
                 <MaterialCommunityIcons name="account-group"
                 size={size} color={color}/>
-            )
+            ),
+            tabBarActiveTintColor: '#ff5722',
+            tabBarActiveBackgroundColor: '#990033',
+            tabBarInactiveBackgroundColor: '#999999',
+            tabBarInactiveTintColor: '#FFFFFF'
         }}
     />
+    <Tab.Screen 
+        name="Custom" 
+        component={SettingsScreen} 
+        options={{
+            title: 'Settings',
+            tabBarLabel: 'Settings',
+            tabBarIcon: ({ color, size }) => (
+               <View
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  height: 64,
+                  width: 64,
+                  borderRadius: 64,
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+                >
+                <MaterialCommunityIcons name="plus-circle" color={color} size={64} />
+              </View>
+            ),
+            tabBarActiveTintColor: '#ff5722'
+          }}  
+      />
     <Tab.Screen
         name = "Payments"
         component = {PaymentsScreen}
@@ -42,7 +88,11 @@ function LandingPage() {
             tabBarIcon:({size,color})=>(
                 <MaterialCommunityIcons name="account-cash"
                 size={size} color={color}/>
-            )
+            ),
+            tabBarActiveTintColor: '#ff5722',
+            tabBarActiveBackgroundColor: '#990033',
+            tabBarInactiveBackgroundColor: '#999999',
+            tabBarInactiveTintColor: '#FFFFFF'
         }}
     />
     <Tab.Screen
@@ -52,23 +102,29 @@ function LandingPage() {
                 tabBarIcon:({size,color})=>(
                     <MaterialCommunityIcons name="settings-helper"
                     size={size} color={color}/>
-            )
+            ),
+            tabBarActiveTintColor: '#ff5722',
+            tabBarActiveBackgroundColor: '#990033',
+            tabBarInactiveBackgroundColor: '#999999',
+            tabBarInactiveTintColor: '#FFFFFF'
         }}
     />
-    </Tab.Navigator>
+    </Tab.Navigator>    
     );
 }
 
 function Navigation(props) {
     return (
+        <View style={{ flex: 1, backgroundColor: '#00FFC2'}}>
         <NavigationContainer>
             <Stack.Navigator
-            screenOptions = {{headShown: false}}
+            screenOptions = {{headerShown: false}}
             >
                 <Stack.Screen name="LoginScreen" component={LoginScreen}/>
                 <Stack.Screen name="LandingPage" component={LandingPage}/>
             </Stack.Navigator>
         </NavigationContainer>
+        </View>
     )
 }
 export default Navigation

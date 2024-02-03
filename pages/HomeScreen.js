@@ -16,6 +16,7 @@ const HomeScreen = () => {
 // Create a stylesheet for styling the components
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#E8FFF5',
     flex: 1, // Flex property allows the container to expand to fill the available space
     justifyContent: 'center', // Align content vertically at the center
     alignItems: 'center', // Align content horizontally at the center
