@@ -6,7 +6,6 @@ import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from '../config/firebase.js';
 
-
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,7 +30,7 @@ const LoginScreen = ({ navigation }) => {
     });
 
     // Navigate to the next screen (you can replace 'HomeScreen' with your desired screen)
-    navigation.navigate('HomeScreen');
+    navigation.navigate('LandingPage');
   };
 
   return (
@@ -55,7 +54,7 @@ const LoginScreen = ({ navigation }) => {
       />
 
       <Button title="Login"
-              onPress={() => navigation.navigate('HomeScreen')}/>
+              onPress={() => navigation.navigate('LandingPage')}/>
 
       <Text style={styles.signupText}>
         Don't have an account?{' '}
