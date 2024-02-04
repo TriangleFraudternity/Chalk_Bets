@@ -8,7 +8,7 @@ const GroupsScreen = () => {
     // Use the View component as a container
     <View style={styles.container}>
       {/* Display a text element */}
-      <Text style={styles.text}>Groups Page</Text>
+      <Text style={styles.text}>Penis</Text>
     </View>
   );
 };
