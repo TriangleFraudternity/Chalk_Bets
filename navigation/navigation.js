@@ -7,6 +7,8 @@ import { View } from 'react-native';
 import GroupsScreen from '../pages/GroupsScreen.js'
 import SettingsScreen from '../pages/SettingsScreen.js'
 import LoginScreen from '../pages/LoginScreen.js'
+import ForgorPasswordScreen from '../pages/ForgorPasswordScreen.js'
+import SignUpScreen from '../pages/SignupScreen.js';
 import HomeScreen from '../pages/HomeScreen.js'
 import PaymentsScreen from '../pages/PaymentsScreen.js'
 
@@ -118,9 +120,11 @@ function Navigation(props) {
         <View style={{ flex: 1, backgroundColor: '#00FFC2'}}>
         <NavigationContainer>
             <Stack.Navigator
-            screenOptions = {{headerShown: false}}
+            screenOptions = {{headerShown: true}}
             >
                 <Stack.Screen name="LoginScreen" component={LoginScreen}/>
+                <Stack.Screen name="SignUpScreen" component={SignUpScreen}/>
+                <Stack.Screen name="ForgorPasswordScreen" component={ForgorPasswordScreen}/>
                 <Stack.Screen name="LandingPage" component={LandingPage}/>
             </Stack.Navigator>
         </NavigationContainer>

@@ -9,7 +9,7 @@ import {auth} from '../config/firebase.js';
 const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [bio, setBio] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleCreateProfile = () => {
     // Add logic to create the user profile
@@ -30,10 +30,10 @@ const SignUpScreen = ({ navigation }) => {
     // For simplicity, let's just log the profile data for now
     console.log('Name:', name);
     console.log('Email:', email);
-    console.log('Bio:', bio);
+    console.log('Password:', password);
 
     // Navigate to the next screen (you can replace 'NextScreen' with your desired screen)
-    navigation.navigate('NextScreen');
+    navigation.navigate('LoginScreen');
   };
 
   return (
@@ -55,11 +55,11 @@ const SignUpScreen = ({ navigation }) => {
         keyboardType="email-address"
       />
 
-      <Text style={styles.label}>Bio:</Text>
+      <Text style={styles.label}>Password:</Text>
       <TextInput
         style={styles.input}
-        value={bio}
-        onChangeText={(text) => setBio(text)}
+        value={password}
+        onChangeText={(text) => setPassword(text)}
         placeholder="Tell us about yourself"
         multiline
       />
