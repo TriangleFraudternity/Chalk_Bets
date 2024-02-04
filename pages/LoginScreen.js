@@ -55,6 +55,12 @@ const LoginScreen = ({ navigation }) => {
 
       <Button title="Login"
               onPress={() => navigation.navigate('LandingPage')}/>
+      
+      <Text style={styles.signupText}>
+        <Text style={styles.signupLink} onPress={() => navigation.navigate('ForgorPasswordScreen')}>
+        Forgor Password?
+        </Text>
+      </Text>
 
       <Text style={styles.signupText}>
         Don't have an account?{' '}
