@@ -3,12 +3,17 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
-import {signInWithEmailAndPassword} from "firebase/auth";
+import {getAuth,signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from '../config/firebase.js';
+
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const loginMessages = 'Wrong credentials entered';
+  const [displayLoginMessage, setDisplayLoginMessage] = useState(false);
+  const auth = getAuth();
+
 
   const handleLogin = () => {
 
@@ -22,15 +27,16 @@ const LoginScreen = ({ navigation }) => {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
-            // ...
+            navigation.navigate('LandingPage');
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
+          setDisplayLoginMessage(true);
+          const errorCode = error.code;
+          const errorMessage = error.message;
     });
 
     // Navigate to the next screen (you can replace 'HomeScreen' with your desired screen)
-    navigation.navigate('LandingPage');
+    
   };
 
   return (
@@ -53,8 +59,9 @@ const LoginScreen = ({ navigation }) => {
         secureTextEntry
       />
 
-      <Button title="Login"
-              onPress={() => navigation.navigate('LandingPage')}/>
+      <Text style={styles.label}>{displayLoginMessage ? loginMessages : "chill in "} </Text>
+
+      <Button title="Login" onPress={() => handleLogin()}/>
       
       <Text style={styles.signupText}>
         <Text style={styles.signupLink} onPress={() => navigation.navigate('ForgorPasswordScreen')}>
