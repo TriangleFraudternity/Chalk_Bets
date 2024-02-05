@@ -5,6 +5,7 @@ import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 
 import {getAuth,signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from '../config/firebase.js';
+import {validateEmail,validatePassword} from '../helpers/validationHelper.js';
 
 
 const LoginScreen = ({ navigation }) => {
@@ -12,7 +13,10 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const loginMessages = 'Wrong credentials entered';
   const [displayLoginMessage, setDisplayLoginMessage] = useState(false);
+  const [emailValidationMessage, setEmailValidationMessage] = useState('');
+  const [passwordValidationMessage, setPasswordValidationMessage] = useState('');
   const auth = getAuth();
+
 
 
   const handleLogin = () => {
@@ -20,22 +24,28 @@ const LoginScreen = ({ navigation }) => {
     // For simplicity, let's just log the email and password for now
     console.log('Email:', email);
     console.log('Password:', password);
+    if (validateEmail(email) && validatePassword(password)) {
+      signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+              // Signed in
+              const user = userCredential.user;
+              navigation.navigate('LandingPage');
+          })
+          .catch((error) => {
+            setDisplayLoginMessage(true);
+            const errorCode = error.code;
+            const errorMessage = error.message;
+      });
+    }
+    else{
+      if (!validateEmail(email)){
+        setEmailValidationMessage('Not a valid email');
+      }
+      if (!validatePassword(password)){
+        setPasswordValidationMessage('Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number');
+      }
+    }
 
-    // Add logic to authenticate the user
-    // You can send the login credentials to your backend for validation
-    signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            navigation.navigate('LandingPage');
-        })
-        .catch((error) => {
-          setDisplayLoginMessage(true);
-          const errorCode = error.code;
-          const errorMessage = error.message;
-    });
-
-    // Navigate to the next screen (you can replace 'HomeScreen' with your desired screen)
     
   };
 
@@ -49,6 +59,7 @@ const LoginScreen = ({ navigation }) => {
         placeholder="Enter your email"
         keyboardType="email-address"
       />
+      <Text style={styles.label}>{emailValidationMessage}</Text>
 
       <Text style={styles.label}>Password:</Text>
       <TextInput
@@ -58,6 +69,7 @@ const LoginScreen = ({ navigation }) => {
         placeholder="Enter your password"
         secureTextEntry
       />
+      <Text style={styles.label}>{passwordValidationMessage}</Text>
 
       <Text style={styles.label}>{displayLoginMessage ? loginMessages : "chill in "} </Text>
 
