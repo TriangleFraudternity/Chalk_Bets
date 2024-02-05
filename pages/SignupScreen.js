@@ -11,14 +11,16 @@ const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [emailValidationMessage, setEmailValidationMessage] = useState('');
   const [passwordValidationMessage, setPasswordValidationMessage] = useState('');
+  const [passwordConfirmValidationMessage, setPasswordConfirmValidationMessage] = useState('');
 
 
   const handleCreateProfile = () => {
     // Add logic to create the user profile
     // You can send the data to your backend or store it locally, depending on your needs
-    if (validateEmail(email) && validatePassword(password)) {
+    if (validateEmail(email) && validatePassword(password) && password == confirmPassword) {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
@@ -37,6 +39,9 @@ const SignUpScreen = ({ navigation }) => {
       console.log('Password:', password);
     }
     else{
+      if (password != confirmPassword){
+        setPasswordConfirmValidationMessage("Passwords must match");
+      }
       if (!validateEmail(email)){
         setEmailValidationMessage('Not a valid email');
       }
@@ -75,6 +80,15 @@ const SignUpScreen = ({ navigation }) => {
         placeholder="Tell us about yourself"
         multiline
       />
+      <Text style={styles.label}>Confirm Password:</Text>
+      <TextInput
+        style={styles.input}
+        value={confirmPassword}
+        onChangeText={(text) => setConfirmPassword(text)}
+        placeholder="Confirm Password"
+        multiline
+      />
+      <Text style={styles.label}>{passwordConfirmValidationMessage}</Text>
       <Text style={styles.label}>{passwordValidationMessage}</Text>
 
 
