@@ -21,19 +21,17 @@ const SignUpScreen = ({ navigation }) => {
     if (validateEmail(email) && validatePassword(password)) {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Signed up
             const user = userCredential.user;
-            navigation.navigate('LoginScreen');
-            // ...
+            navigation.navigate('LandingPage');
         })
         .catch((error) => {
+            if (error.code == 'auth/email-already-in-use') {
+              setEmailValidationMessage("Email is already in use");
+              console.log("Email is already in use");
+            }
             const errorCode = error.code;
             const errorMessage = error.message;
-            // ..
-
       });
-
-      // For simplicity, let's just log the profile data for now
       console.log('Name:', name);
       console.log('Email:', email);
       console.log('Password:', password);
@@ -45,10 +43,7 @@ const SignUpScreen = ({ navigation }) => {
       if (!validatePassword(password)){
         setPasswordValidationMessage('Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number');
       }
-    }
-
-    // Navigate to the next screen (you can replace 'NextScreen' with your desired screen)
-    
+    }    
   };
 
   return (
