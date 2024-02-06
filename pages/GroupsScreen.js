@@ -1,5 +1,6 @@
 // Import necessary React and React Native components
 import React from 'react';
+
 import { View, Text, StyleSheet } from 'react-native';
 
 // Create a functional component for the page
