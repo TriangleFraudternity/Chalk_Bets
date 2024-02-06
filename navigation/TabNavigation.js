@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from '../styling.js'
+
 // Import relative React Native Components
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View } from 'react-native';
@@ -38,10 +40,7 @@ function TabNavigation() {
                     <MaterialCommunityIcons name="home"
                     size={size} color={color}/>
                 ),
-                tabBarActiveTintColor: '#ff5722',
-                tabBarActiveBackgroundColor: '#990033',
-                tabBarInactiveBackgroundColor: '#999999',
-                tabBarInactiveTintColor: '#FFFFFF'
+            style = styles.Tab.Screen
             }}
         />
         <Tab.Screen
@@ -53,10 +52,7 @@ function TabNavigation() {
                     <MaterialCommunityIcons name="account-group"
                     size={size} color={color}/>
                 ),
-                tabBarActiveTintColor: '#ff5722',
-                tabBarActiveBackgroundColor: '#990033',
-                tabBarInactiveBackgroundColor: '#999999',
-                tabBarInactiveTintColor: '#FFFFFF'
+                style = styles.Tab.Screen
             }}
         />
         <Tab.Screen 
@@ -92,7 +88,6 @@ function TabNavigation() {
                     size={size} color={color}/>
                 ),
                 tabBarActiveTintColor: '#ff5722',
-                tabBarActiveBackgroundColor: '#990033',
                 tabBarInactiveBackgroundColor: '#999999',
                 tabBarInactiveTintColor: '#FFFFFF'
             }}

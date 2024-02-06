@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+import styles from '../assets/styling.js'
+
 import { View } from 'react-native';
 import GroupsScreen from '../pages/GroupsScreen.js'
 import SettingsScreen from '../pages/SettingsScreen.js'
@@ -19,6 +21,7 @@ function LandingPage() {
     return (
     <Tab.Navigator 
     initialRouteName="Home" 
+    tabBarOptions = {styles.tabBarStyle}
     screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
@@ -38,13 +41,10 @@ function LandingPage() {
                 <MaterialCommunityIcons name="home"
                 size={size} color={color}/>
             ),
-            tabBarActiveTintColor: '#ff5722',
-            tabBarActiveBackgroundColor: '#990033',
-            tabBarInactiveBackgroundColor: '#999999',
-            tabBarInactiveTintColor: '#FFFFFF'
         }}
     />
     <Tab.Screen
+        style = {styles.Tab}
         name = "Groups"
         component = {GroupsScreen}
         options = {{
@@ -53,10 +53,6 @@ function LandingPage() {
                 <MaterialCommunityIcons name="account-group"
                 size={size} color={color}/>
             ),
-            tabBarActiveTintColor: '#ff5722',
-            tabBarActiveBackgroundColor: '#990033',
-            tabBarInactiveBackgroundColor: '#999999',
-            tabBarInactiveTintColor: '#FFFFFF'
         }}
     />
     <Tab.Screen 
@@ -80,7 +76,6 @@ function LandingPage() {
                 <MaterialCommunityIcons name="plus-circle" color={color} size={64} />
               </View>
             ),
-            tabBarActiveTintColor: '#ff5722'
           }}  
       />
     <Tab.Screen
@@ -91,10 +86,6 @@ function LandingPage() {
                 <MaterialCommunityIcons name="account-cash"
                 size={size} color={color}/>
             ),
-            tabBarActiveTintColor: '#ff5722',
-            tabBarActiveBackgroundColor: '#990033',
-            tabBarInactiveBackgroundColor: '#999999',
-            tabBarInactiveTintColor: '#FFFFFF'
         }}
     />
     <Tab.Screen
@@ -105,10 +96,6 @@ function LandingPage() {
                     <MaterialCommunityIcons name="settings-helper"
                     size={size} color={color}/>
             ),
-            tabBarActiveTintColor: '#ff5722',
-            tabBarActiveBackgroundColor: '#990033',
-            tabBarInactiveBackgroundColor: '#999999',
-            tabBarInactiveTintColor: '#FFFFFF'
         }}
     />
     </Tab.Navigator>    
