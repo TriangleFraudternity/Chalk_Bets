@@ -24,6 +24,7 @@
     "react-native": "0.73.2",
     "react-native-dropdown-menu": "^2.0.0",
     "react-native-elements": "^3.4.3",
+    "react-native-hide-show-password-input": "^1.2.0",
     "react-native-ico-material-design": "^5.1.2",
     "react-native-linear-gradient": "^2.8.3",
     "react-native-modal": "^13.0.1",

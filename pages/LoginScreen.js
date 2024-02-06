@@ -6,6 +6,11 @@ import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import {getAuth,signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from '../config/firebase.js';
 import {validateEmail,validatePassword} from '../helpers/validationHelper.js';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import styles from '../assets/authStyles.js';
+
+import PasswordInputText from 'react-native-hide-show-password-input';
+
 
 
 const LoginScreen = ({ navigation }) => {
@@ -17,7 +22,11 @@ const LoginScreen = ({ navigation }) => {
   const [passwordValidationMessage, setPasswordValidationMessage] = useState('');
   const auth = getAuth();
 
+  const [showPassword, setShowPassword] = useState(false);
 
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  }
 
   const handleLogin = () => {
 
@@ -51,7 +60,11 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+
+
       <Text style={styles.label}>Email:</Text>
+
+      <View style={styles.inputContainer}>
       <TextInput
         style={styles.input}
         value={email}
@@ -59,19 +72,30 @@ const LoginScreen = ({ navigation }) => {
         placeholder="Enter your email"
         keyboardType="email-address"
       />
+      </View>
+
       <Text style={styles.label}>{emailValidationMessage}</Text>
 
       <Text style={styles.label}>Password:</Text>
-      <TextInput
-        style={styles.input}
-        value={password}
-        onChangeText={(text) => setPassword(text)}
-        placeholder="Enter your password"
-        secureTextEntry
-      />
+      
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          onChangeText={(password) => setPassword(password)}
+          placeholder="Enter your password"
+          secureTextEntry = {!showPassword}
+        />
+        <MaterialCommunityIcons 
+            name={showPassword ? 'eye-off' : 'eye'} 
+            size={24} 
+            color="#aaa"
+            style={styles.icon} 
+            onPress={toggleShowPassword} 
+        /> 
+      </View>
       <Text style={styles.label}>{passwordValidationMessage}</Text>
 
-      <Text style={styles.label}>{displayLoginMessage ? loginMessages : "chill in "} </Text>
+      <Text style={styles.label}>{displayLoginMessage ? loginMessages : "login message placeholder! "} </Text>
 
       <Button title="Login" onPress={() => handleLogin()}/>
       
@@ -91,31 +115,6 @@ const LoginScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    justifyContent: 'center',
-  },
-  label: {
-    fontSize: 16,
-    marginBottom: 8,
-  },
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 16,
-    paddingHorizontal: 8,
-  },
-  signupText: {
-    marginTop: 16,
-    textAlign: 'center',
-  },
-  signupLink: {
-    color: 'blue',
-    textDecorationLine: 'underline',
-  },
-});
+
 
 export default LoginScreen;

@@ -4,6 +4,10 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 import {validateEmail,validatePassword} from '../helpers/validationHelper.js';
+import styles from '../assets/authStyles.js';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+
 
 import {auth} from '../config/firebase.js';
 
@@ -15,6 +19,12 @@ const SignUpScreen = ({ navigation }) => {
   const [emailValidationMessage, setEmailValidationMessage] = useState('');
   const [passwordValidationMessage, setPasswordValidationMessage] = useState('');
   const [passwordConfirmValidationMessage, setPasswordConfirmValidationMessage] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  }
+
 
 
   const handleCreateProfile = () => {
@@ -54,40 +64,68 @@ const SignUpScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Name:</Text>
-      <TextInput
-        style={styles.input}
-        value={name}
-        onChangeText={(text) => setName(text)}
-        placeholder="Enter your name"
-      />
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          value={name}
+          onChangeText={(text) => setName(text)}
+          placeholder="Enter your name"
+        />
+      </View>
 
+      
       <Text style={styles.label}>Email:</Text>
-      <TextInput
-        style={styles.input}
-        value={email}
-        onChangeText={(text) => setEmail(text)}
-        placeholder="Enter your email"
-        keyboardType="email-address"
-      />
+        <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          value={email}
+          onChangeText={(text) => setEmail(text)}
+          placeholder="Enter your email"
+          keyboardType="email-address"
+        />
+      </View>
       <Text style={styles.label}>{emailValidationMessage}</Text>
 
 
+      
       <Text style={styles.label}>Password:</Text>
-      <TextInput
-        style={styles.input}
-        value={password}
-        onChangeText={(text) => setPassword(text)}
-        placeholder="Tell us about yourself"
-        multiline
-      />
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          defaultValue={password}
+          onChangeText={(text) => setPassword(text)}
+          placeholder="Enter your password"
+          secureTextEntry = {!showPassword}
+        />
+        <MaterialCommunityIcons 
+            name={showPassword ? 'eye-off' : 'eye'} 
+            size={24} 
+            color="#aaa"
+            style={styles.icon} 
+            onPress={toggleShowPassword} 
+        /> 
+      </View>
+      
+
       <Text style={styles.label}>Confirm Password:</Text>
-      <TextInput
-        style={styles.input}
-        value={confirmPassword}
-        onChangeText={(text) => setConfirmPassword(text)}
-        placeholder="Confirm Password"
-        multiline
-      />
+      <Text style={styles.label}>Password:</Text>
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.input}
+          defaultValue={confirmPassword}
+          onChangeText={(text) => setConfirmPassword(text)}
+          placeholder="Confirm Password"
+          secureTextEntry = {!showPassword}
+        />
+        <MaterialCommunityIcons 
+            name={showPassword ? 'eye-off' : 'eye'} 
+            size={24} 
+            color="#aaa"
+            style={styles.icon} 
+            onPress={toggleShowPassword} 
+        /> 
+      </View>
+      
       <Text style={styles.label}>{passwordConfirmValidationMessage}</Text>
       <Text style={styles.label}>{passwordValidationMessage}</Text>
 
@@ -98,22 +136,6 @@ const SignUpScreen = ({ navigation }) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-  },
-  label: {
-    fontSize: 16,
-    marginBottom: 8,
-  },
-  input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 16,
-    paddingHorizontal: 8,
-  },
-});
+
 
 export default SignUpScreen;
