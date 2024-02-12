@@ -14,11 +14,7 @@
   },
   "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-documentation",
   "source_files": "**/*.{m,mm,cpp,h}",
-  "exclude_files": [
-    "tests",
-    "platform/android",
-    "platform/cxx"
-  ],
+  "exclude_files": ["tests", "platform/android", "platform/cxx"],
   "header_dir": "react/renderer/graphics",
   "pod_target_xcconfig": {
     "USE_HEADERMAP": "NO",
@@ -27,17 +23,9 @@
     "CLANG_CXX_LANGUAGE_STANDARD": "c++20"
   },
   "dependencies": {
-    "glog": [
-
-    ],
-    "RCT-Folly/Fabric": [
-      "2022.05.16.00"
-    ],
-    "React-Core/Default": [
-      "0.73.2"
-    ],
-    "React-utils": [
-
-    ]
+    "glog": [],
+    "RCT-Folly/Fabric": ["2022.05.16.00"],
+    "React-Core/Default": ["0.73.2"],
+    "React-utils": []
   }
 }

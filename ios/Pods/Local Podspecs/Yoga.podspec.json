@@ -78,7 +78,5 @@
     "yoga/style/CompactValue.h",
     "yoga/style/Style.h"
   ],
-  "preserve_paths": [
-    "yoga/**/*.h"
-  ]
+  "preserve_paths": ["yoga/**/*.h"]
 }

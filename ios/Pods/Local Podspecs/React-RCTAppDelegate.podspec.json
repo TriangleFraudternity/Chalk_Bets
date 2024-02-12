@@ -25,44 +25,18 @@
     "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/Headers/Private/React-Core\""
   },
   "dependencies": {
-    "React-Core": [
-
-    ],
-    "RCT-Folly": [
-
-    ],
-    "RCTRequired": [
-
-    ],
-    "RCTTypeSafety": [
-
-    ],
-    "React-RCTNetwork": [
-
-    ],
-    "React-RCTImage": [
-
-    ],
-    "React-CoreModules": [
-
-    ],
-    "React-nativeconfig": [
-
-    ],
-    "ReactCommon": [
-
-    ],
-    "React-NativeModulesApple": [
-
-    ],
-    "React-runtimescheduler": [
-
-    ],
-    "React-RCTFabric": [
-
-    ],
-    "React-hermes": [
-
-    ]
+    "React-Core": [],
+    "RCT-Folly": [],
+    "RCTRequired": [],
+    "RCTTypeSafety": [],
+    "React-RCTNetwork": [],
+    "React-RCTImage": [],
+    "React-CoreModules": [],
+    "React-nativeconfig": [],
+    "ReactCommon": [],
+    "React-NativeModulesApple": [],
+    "React-runtimescheduler": [],
+    "React-RCTFabric": [],
+    "React-hermes": []
   }
 }

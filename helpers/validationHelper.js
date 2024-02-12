@@ -3,12 +3,13 @@ function validateEmail(email) {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
-  
+
 function validatePassword(password) {
     // Password validation according to Google Firebase standards
     // Minimum 8 characters, at least one uppercase letter, one lowercase letter, and one number
-    var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)([a-zA-Z\d!@#$%^&*()_+]){8,}$/;
-    
+    var passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)([a-zA-Z\d!@#$%^&*()_+]){8,}$/;
+
     return passwordRegex.test(password);
 }
 

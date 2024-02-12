@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint . --fix --max-warnings=0",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.1.1",
@@ -16,9 +18,11 @@
     "@react-navigation/native-stack": "^6.9.17",
     "devextreme": "23.2.4",
     "devextreme-react": "23.2.4",
+    "eslint-config-prettier": "^9.1.0",
     "expo": "^50.0.2",
     "expo-status-bar": "~1.2.0",
     "firebase": "^10.7.2",
+    "prettier": "^3.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.73.2",
@@ -29,9 +33,6 @@
     "react-native-modal": "^13.0.1",
     "react-native-popup-menu": "^0.16.1",
     "react-native-reanimated": "~3.6.2",
-    "react-native-safe-area-context": "^4.8.2",
-    "react-native-screens": "~3.29.0",
-    "react-native-svg": "^14.1.0",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
     "react-native-svg": "12.1.1",

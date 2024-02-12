@@ -21,44 +21,18 @@
   },
   "header_dir": "cxxreact",
   "dependencies": {
-    "boost": [
-      "1.83.0"
-    ],
-    "DoubleConversion": [
-
-    ],
-    "fmt": [
-      "~> 6.2.1"
-    ],
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "glog": [
-
-    ],
-    "React-jsinspector": [
-      "0.73.2"
-    ],
-    "React-callinvoker": [
-      "0.73.2"
-    ],
-    "React-runtimeexecutor": [
-      "0.73.2"
-    ],
-    "React-perflogger": [
-      "0.73.2"
-    ],
-    "React-jsi": [
-      "0.73.2"
-    ],
-    "React-logger": [
-      "0.73.2"
-    ],
-    "React-debug": [
-      "0.73.2"
-    ],
-    "hermes-engine": [
-
-    ]
+    "boost": ["1.83.0"],
+    "DoubleConversion": [],
+    "fmt": ["~> 6.2.1"],
+    "RCT-Folly": ["2022.05.16.00"],
+    "glog": [],
+    "React-jsinspector": ["0.73.2"],
+    "React-callinvoker": ["0.73.2"],
+    "React-runtimeexecutor": ["0.73.2"],
+    "React-perflogger": ["0.73.2"],
+    "React-jsi": ["0.73.2"],
+    "React-logger": ["0.73.2"],
+    "React-debug": ["0.73.2"],
+    "hermes-engine": []
   }
 }

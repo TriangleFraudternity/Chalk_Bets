@@ -20,24 +20,12 @@
     "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/RCT-Folly\""
   },
   "dependencies": {
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "RCTRequired": [
-      "0.73.2"
-    ],
-    "RCTTypeSafety": [
-      "0.73.2"
-    ],
-    "React-Core": [
-      "0.73.2"
-    ],
-    "React-jsi": [
-      "0.73.2"
-    ],
-    "ReactCommon/turbomodule/core": [
-      "0.73.2"
-    ]
+    "RCT-Folly": ["2022.05.16.00"],
+    "RCTRequired": ["0.73.2"],
+    "RCTTypeSafety": ["0.73.2"],
+    "React-Core": ["0.73.2"],
+    "React-jsi": ["0.73.2"],
+    "ReactCommon/turbomodule/core": ["0.73.2"]
   },
   "prepare_command": "mkdir -p ../../../../ios/build/generated/ios/./FBReactNativeSpec && touch -a ../../../../ios/build/generated/ios/./FBReactNativeSpec/FBReactNativeSpec.h ../../../../ios/build/generated/ios/./FBReactNativeSpec/FBReactNativeSpec-generated.mm",
   "script_phases": {

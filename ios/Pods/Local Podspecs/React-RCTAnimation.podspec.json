@@ -14,11 +14,7 @@
     "tag": "v0.73.2"
   },
   "source_files": "**/*.{h,m,mm}",
-  "preserve_paths": [
-    "package.json",
-    "LICENSE",
-    "LICENSE-docs"
-  ],
+  "preserve_paths": ["package.json", "LICENSE", "LICENSE-docs"],
   "header_dir": "RCTAnimation",
   "pod_target_xcconfig": {
     "USE_HEADERMAP": "YES",
@@ -26,26 +22,12 @@
     "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/RCT-Folly\" \"${PODS_ROOT}/Headers/Public/React-Codegen/react/renderer/components\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-Codegen/React_Codegen.framework/Headers\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-Codegen/React_Codegen.framework/Headers/build/generated/ios\" \"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers\" \"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers\""
   },
   "dependencies": {
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "RCTTypeSafety": [
-
-    ],
-    "React-jsi": [
-
-    ],
-    "React-Core/RCTAnimationHeaders": [
-
-    ],
-    "React-Codegen": [
-
-    ],
-    "ReactCommon": [
-
-    ],
-    "React-NativeModulesApple": [
-
-    ]
+    "RCT-Folly": ["2022.05.16.00"],
+    "RCTTypeSafety": [],
+    "React-jsi": [],
+    "React-Core/RCTAnimationHeaders": [],
+    "React-Codegen": [],
+    "ReactCommon": [],
+    "React-NativeModulesApple": []
   }
 }

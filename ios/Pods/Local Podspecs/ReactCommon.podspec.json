@@ -22,52 +22,28 @@
     "GCC_WARN_PEDANTIC": "YES"
   },
   "dependencies": {
-    "React-logger": [
-      "0.73.2"
-    ]
+    "React-logger": ["0.73.2"]
   },
   "subspecs": [
     {
       "name": "turbomodule",
       "dependencies": {
-        "React-callinvoker": [
-          "0.73.2"
-        ],
-        "React-perflogger": [
-          "0.73.2"
-        ],
-        "React-cxxreact": [
-          "0.73.2"
-        ],
-        "React-jsi": [
-          "0.73.2"
-        ],
-        "RCT-Folly": [
-          "2022.05.16.00"
-        ],
-        "DoubleConversion": [
-
-        ],
-        "fmt": [
-          "~> 6.2.1"
-        ],
-        "glog": [
-
-        ],
-        "hermes-engine": [
-
-        ]
+        "React-callinvoker": ["0.73.2"],
+        "React-perflogger": ["0.73.2"],
+        "React-cxxreact": ["0.73.2"],
+        "React-jsi": ["0.73.2"],
+        "RCT-Folly": ["2022.05.16.00"],
+        "DoubleConversion": [],
+        "fmt": ["~> 6.2.1"],
+        "glog": [],
+        "hermes-engine": []
       },
       "subspecs": [
         {
           "name": "bridging",
           "dependencies": {
-            "React-jsi": [
-              "0.73.2"
-            ],
-            "hermes-engine": [
-
-            ]
+            "React-jsi": ["0.73.2"],
+            "hermes-engine": []
           },
           "source_files": "react/bridging/**/*.{cpp,h}",
           "exclude_files": "react/bridging/tests",

@@ -39,15 +39,9 @@
   },
   "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -DREACT_NATIVE_TARGET_VERSION=73",
   "dependencies": {
-    "React-Core": [
-
-    ],
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "glog": [
-
-    ]
+    "React-Core": [],
+    "RCT-Folly": ["2022.05.16.00"],
+    "glog": []
   },
   "source_files": "ios/**/*.{h,m,mm,swift}",
   "preserve_paths": "ios/**/*.{h,m,mm,swift}",
@@ -56,10 +50,7 @@
     "ios/ReactNativeCompatibles/**/*",
     "vendored/**/*"
   ],
-  "default_subspecs": [
-    "Main",
-    "ReactNativeCompatibles"
-  ],
+  "default_subspecs": ["Main", "ReactNativeCompatibles"],
   "testspecs": [
     {
       "name": "Tests",
@@ -67,18 +58,10 @@
       "requires_app_host": false,
       "source_files": "ios/Tests/**/*",
       "dependencies": {
-        "Quick": [
-
-        ],
-        "Nimble": [
-
-        ],
-        "React-CoreModules": [
-
-        ],
-        "ExpoModulesTestCore": [
-
-        ]
+        "Quick": [],
+        "Nimble": [],
+        "React-CoreModules": [],
+        "ExpoModulesTestCore": []
       },
       "platforms": {
         "ios": "13.4"
@@ -90,12 +73,8 @@
       "requires_app_host": true,
       "source_files": "ios/UITests/**/*",
       "dependencies": {
-        "React-CoreModules": [
-
-        ],
-        "React": [
-
-        ]
+        "React-CoreModules": [],
+        "React": []
       },
       "platforms": {
         "ios": "13.4"
@@ -106,9 +85,7 @@
     {
       "name": "SafeAreaView",
       "dependencies": {
-        "ExpoModulesCore": [
-
-        ]
+        "ExpoModulesCore": []
       },
       "pod_target_xcconfig": {
         "DEFINES_MODULE": "YES",
@@ -121,29 +98,17 @@
     {
       "name": "Vendored",
       "dependencies": {
-        "expo-dev-menu/SafeAreaView": [
-
-        ]
+        "expo-dev-menu/SafeAreaView": []
       }
     },
     {
       "name": "Main",
       "dependencies": {
-        "React-Core": [
-
-        ],
-        "EXManifests": [
-
-        ],
-        "ExpoModulesCore": [
-
-        ],
-        "expo-dev-menu-interface": [
-
-        ],
-        "expo-dev-menu/Vendored": [
-
-        ]
+        "React-Core": [],
+        "EXManifests": [],
+        "ExpoModulesCore": [],
+        "expo-dev-menu-interface": [],
+        "expo-dev-menu/Vendored": []
       }
     },
     {
@@ -151,9 +116,7 @@
       "source_files": "ios/ReactNativeCompatibles/ReactNative/**/*",
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -DREACT_NATIVE_TARGET_VERSION=73",
       "dependencies": {
-        "React-Core": [
-
-        ]
+        "React-Core": []
       }
     }
   ],

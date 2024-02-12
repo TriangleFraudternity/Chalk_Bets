@@ -22,14 +22,8 @@
     "DEFINES_MODULE": "YES"
   },
   "dependencies": {
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "glog": [
-
-    ],
-    "React-debug": [
-
-    ]
+    "RCT-Folly": ["2022.05.16.00"],
+    "glog": [],
+    "React-debug": []
   }
 }

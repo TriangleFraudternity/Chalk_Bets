@@ -1,30 +1,31 @@
 // LoginScreen.js
 
-import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import React, {useState} from "react";
+import {View, Text, TextInput, Button, StyleSheet} from "react-native";
+import PropTypes from "prop-types";
+
 
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../config/firebase.js";
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const handleLogin = () => {
-
-        // For simplicity, let's just log the email and password for now
+    // For simplicity, let's just log the email and password for now
         console.log("Email:", email);
         console.log("Password:", password);
 
         // Add logic to authenticate the user
         // You can send the login credentials to your backend for validation
         signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-            // Signed in
+            .then(userCredential => {
+                // Signed in
                 const user = userCredential.user;
-            // ...
+                // ...
             })
-            .catch((error) => {
+            .catch(error => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
             });
@@ -39,7 +40,7 @@ const LoginScreen = ({ navigation }) => {
             <TextInput
                 style={styles.input}
                 value={email}
-                onChangeText={(text) => setEmail(text)}
+                onChangeText={text => setEmail(text)}
                 placeholder="Enter your email"
                 keyboardType="email-address"
             />
@@ -48,22 +49,28 @@ const LoginScreen = ({ navigation }) => {
             <TextInput
                 style={styles.input}
                 value={password}
-                onChangeText={(text) => setPassword(text)}
+                onChangeText={text => setPassword(text)}
                 placeholder="Enter your password"
                 secureTextEntry
             />
 
-            <Button title="Login"
-                onPress={() => navigation.navigate("TabNavigation")}/>
+            <Button
+                title="Login"
+                onPress={() => navigation.navigate("TabNavigation")}
+            />
 
             <Text style={styles.signupText}>
-        Don't have an account?{" "}
-                <Text style={styles.signupLink} onPress={() => navigation.navigate("SignUpScreen")}>
+                <Text
+                    style={styles.signupLink}
+                    onPress={() => navigation.navigate("SignUpScreen")}>
           Sign up
                 </Text>
             </Text>
         </View>
     );
+};
+LoginScreen.propTypes = {
+    navigation: PropTypes.string.isRequired,
 };
 
 const styles = StyleSheet.create({

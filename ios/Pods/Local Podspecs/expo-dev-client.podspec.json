@@ -15,31 +15,15 @@
   "static_framework": true,
   "header_dir": "EXDevClient",
   "dependencies": {
-    "expo-dev-launcher": [
-
-    ],
-    "expo-dev-menu": [
-
-    ],
-    "expo-dev-menu-interface": [
-
-    ],
-    "EXManifests": [
-
-    ],
-    "EXUpdatesInterface": [
-
-    ]
+    "expo-dev-launcher": [],
+    "expo-dev-menu": [],
+    "expo-dev-menu-interface": [],
+    "EXManifests": [],
+    "EXUpdatesInterface": []
   },
   "configuration_pod_whitelist": {
-    "expo-dev-launcher": [
-      "debug"
-    ],
-    "expo-dev-menu": [
-      "debug"
-    ],
-    "EXManifests": [
-      "debug"
-    ]
+    "expo-dev-launcher": ["debug"],
+    "expo-dev-menu": ["debug"],
+    "EXManifests": ["debug"]
   }
 }

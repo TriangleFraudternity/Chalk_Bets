@@ -12,14 +12,14 @@ const styles = StyleSheet.create({
         activeTintColor: "#990033",
         activeBackgroundColor: "#292929",
         inactiveBackgroundColor: "#292929",
-        inactiveTintColor: "#FFFFFF"
+        inactiveTintColor: "#FFFFFF",
     },
     Tab: {
         tabBarActiveTintColor: "#400002",
         tabBarActiveBackgroundColor: "#292929",
         tabBarInactiveBackgroundColor: "#292929",
-        tabBarInactiveTintColor: "#FFFFFF"
+        tabBarInactiveTintColor: "#FFFFFF",
     },
 });
 
-export { styles as default };
+export {styles as default};

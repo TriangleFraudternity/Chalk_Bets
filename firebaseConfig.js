@@ -1,6 +1,5 @@
-
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import {initializeApp} from "firebase/app";
 import {getAuth} from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -15,5 +14,5 @@ export default {
     storageBucket: "chalkbets-1bf48.appspot.com",
     messagingSenderId: "761565960474",
     appId: "1:761565960474:web:82826465f5fd5daf0eb4a3",
-    measurementId: "G-3FSC8S7HYN"
+    measurementId: "G-3FSC8S7HYN",
 };

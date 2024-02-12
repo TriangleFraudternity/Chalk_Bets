@@ -16,9 +16,7 @@
   },
   "static_framework": true,
   "dependencies": {
-    "ExpoModulesCore": [
-
-    ]
+    "ExpoModulesCore": []
   },
   "source_files": "EXFont/**/*.{h,m}"
 }

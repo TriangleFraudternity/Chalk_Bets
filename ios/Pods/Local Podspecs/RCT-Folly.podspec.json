@@ -14,18 +14,10 @@
   "module_name": "folly",
   "header_mappings_dir": ".",
   "dependencies": {
-    "boost": [
-
-    ],
-    "DoubleConversion": [
-
-    ],
-    "glog": [
-
-    ],
-    "fmt": [
-      "~> 6.2.1"
-    ]
+    "boost": [],
+    "DoubleConversion": [],
+    "glog": [],
+    "fmt": ["~> 6.2.1"]
   },
   "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -DFOLLY_HAVE_PTHREAD=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-documentation -faligned-new",
   "preserve_paths": "folly/*.h",
@@ -119,9 +111,7 @@
     {
       "name": "Futures",
       "dependencies": {
-        "libevent": [
-
-        ]
+        "libevent": []
       },
       "pod_target_xcconfig": {
         "HEADER_SEARCH_PATHS": [

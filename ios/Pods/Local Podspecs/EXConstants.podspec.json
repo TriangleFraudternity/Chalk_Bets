@@ -17,9 +17,7 @@
   },
   "static_framework": true,
   "dependencies": {
-    "ExpoModulesCore": [
-
-    ]
+    "ExpoModulesCore": []
   },
   "pod_target_xcconfig": {
     "DEFINES_MODULE": "YES",
@@ -32,9 +30,7 @@
     "execution_position": "before_compile"
   },
   "resource_bundles": {
-    "EXConstants": [
-
-    ]
+    "EXConstants": []
   },
   "swift_version": "5.4"
 }

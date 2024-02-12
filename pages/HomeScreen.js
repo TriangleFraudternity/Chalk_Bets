@@ -1,15 +1,13 @@
 // Import necessary React and React Native components
-import React, { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-
-
+import React, {useState} from "react";
+import {View, Text, StyleSheet} from "react-native";
+import {getAuth, onAuthStateChanged} from "firebase/auth";
 
 // Create a functional component for the page
 const HomeScreen = () => {
     const auth = getAuth();
-    const [currentUser,setCurrentUser] = useState();
-    onAuthStateChanged(auth, (user) => {
+    const [currentUser, setCurrentUser] = useState();
+    onAuthStateChanged(auth, user => {
         if (user) {
             // User is signed in, see docs for a list of available properties
             // https://firebase.google.com/docs/reference/js/auth.user

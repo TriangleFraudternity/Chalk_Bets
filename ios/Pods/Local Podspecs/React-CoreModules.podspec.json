@@ -22,35 +22,15 @@
   },
   "frameworks": "UIKit",
   "dependencies": {
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "RCTTypeSafety": [
-      "0.73.2"
-    ],
-    "React-Core/CoreModulesHeaders": [
-      "0.73.2"
-    ],
-    "React-RCTImage": [
-      "0.73.2"
-    ],
-    "React-jsi": [
-      "0.73.2"
-    ],
-    "React-RCTBlob": [
-
-    ],
-    "SocketRocket": [
-      "0.6.1"
-    ],
-    "React-Codegen": [
-
-    ],
-    "ReactCommon": [
-
-    ],
-    "React-NativeModulesApple": [
-
-    ]
+    "RCT-Folly": ["2022.05.16.00"],
+    "RCTTypeSafety": ["0.73.2"],
+    "React-Core/CoreModulesHeaders": ["0.73.2"],
+    "React-RCTImage": ["0.73.2"],
+    "React-jsi": ["0.73.2"],
+    "React-RCTBlob": [],
+    "SocketRocket": ["0.6.1"],
+    "React-Codegen": [],
+    "ReactCommon": [],
+    "React-NativeModulesApple": []
   }
 }

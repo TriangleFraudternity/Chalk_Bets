@@ -17,9 +17,7 @@
   "static_framework": true,
   "header_dir": "Expo",
   "dependencies": {
-    "ExpoModulesCore": [
-
-    ]
+    "ExpoModulesCore": []
   },
   "source_files": "ios/**/*.{h,m,swift}"
 }
