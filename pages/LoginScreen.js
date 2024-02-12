@@ -29,7 +29,7 @@ const LoginScreen = ({ navigation }) => {
           .then((userCredential) => {
               // Signed in
               const user = userCredential.user;
-              navigation.navigate('LandingPage');
+              navigation.navigate('TabNavigation');
           })
           .catch((error) => {
             setDisplayLoginMessage(true);
