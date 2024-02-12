@@ -21,30 +21,30 @@ const LoginScreen = ({ navigation }) => {
 
     const handleLogin = () => {
 
-        // For simplicity, let's just log the email and password for now
-        console.log("Email:", email);
-        console.log("Password:", password);
-        if (validateEmail(email) && validatePassword(password)) {
-            signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Signed in
-                    const user = userCredential.user;
-                    navigation.navigate("LandingPage");
-                })
-                .catch((error) => {
-                    setDisplayLoginMessage(true);
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                });
-        }
-        else{
-            if (!validateEmail(email)){
-                setEmailValidationMessage("Not a valid email");
-            }
-            if (!validatePassword(password)){
-                setPasswordValidationMessage("Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number");
-            }
-        }
+    // For simplicity, let's just log the email and password for now
+    console.log('Email:', email);
+    console.log('Password:', password);
+    if (validateEmail(email) && validatePassword(password)) {
+      signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+              // Signed in
+              const user = userCredential.user;
+              navigation.navigate('TabNavigation');
+          })
+          .catch((error) => {
+            setDisplayLoginMessage(true);
+            const errorCode = error.code;
+            const errorMessage = error.message;
+      });
+    }
+    else{
+      if (!validateEmail(email)){
+        setEmailValidationMessage('Not a valid email');
+      }
+      if (!validatePassword(password)){
+        setPasswordValidationMessage('Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number');
+      }
+    }
 
     
     };
