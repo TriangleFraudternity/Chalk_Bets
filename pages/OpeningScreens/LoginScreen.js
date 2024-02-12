@@ -4,7 +4,6 @@ import React, {useState} from "react";
 import {View, Text, TextInput, Button, StyleSheet} from "react-native";
 import PropTypes from "prop-types";
 
-
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../config/firebase.js";
 
