@@ -17,15 +17,9 @@
   },
   "source_files": "ios/**/*.{h,m}",
   "dependencies": {
-    "React-Core": [
-
-    ],
-    "RNFBApp": [
-
-    ],
-    "Firebase/Database": [
-      "10.19.0"
-    ]
+    "React-Core": [],
+    "RNFBApp": [],
+    "Firebase/Database": ["10.19.0"]
   },
   "static_framework": false
 }

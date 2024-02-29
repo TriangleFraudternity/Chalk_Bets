@@ -20,68 +20,30 @@
     "HEADER_SEARCH_PATHS": "\"${PODS_CONFIGURATION_BUILD_DIR}/React-rendererdebug/React_rendererdebug.framework/Headers\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios\""
   },
   "dependencies": {
-    "RCT-Folly/Fabric": [
-      "2022.05.16.00"
-    ],
-    "React-jsiexecutor": [
-
-    ],
-    "RCTRequired": [
-
-    ],
-    "RCTTypeSafety": [
-
-    ],
-    "ReactCommon/turbomodule/core": [
-
-    ],
-    "React-jsi": [
-
-    ],
-    "React-logger": [
-
-    ],
-    "glog": [
-
-    ],
-    "DoubleConversion": [
-
-    ],
-    "fmt": [
-      "~> 6.2.1"
-    ],
-    "React-Core": [
-
-    ],
-    "React-debug": [
-
-    ],
-    "React-utils": [
-
-    ],
-    "React-runtimescheduler": [
-
-    ],
-    "React-cxxreact": [
-
-    ],
-    "React-rendererdebug": [
-
-    ],
-    "React-graphics": [
-
-    ],
-    "hermes-engine": [
-
-    ]
+    "RCT-Folly/Fabric": ["2022.05.16.00"],
+    "React-jsiexecutor": [],
+    "RCTRequired": [],
+    "RCTTypeSafety": [],
+    "ReactCommon/turbomodule/core": [],
+    "React-jsi": [],
+    "React-logger": [],
+    "glog": [],
+    "DoubleConversion": [],
+    "fmt": ["~> 6.2.1"],
+    "React-Core": [],
+    "React-debug": [],
+    "React-utils": [],
+    "React-runtimescheduler": [],
+    "React-cxxreact": [],
+    "React-rendererdebug": [],
+    "React-graphics": [],
+    "hermes-engine": []
   },
   "subspecs": [
     {
       "name": "animations",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/animations/**/*.{m,mm,cpp,h}",
@@ -91,9 +53,7 @@
     {
       "name": "attributedstring",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/attributedstring/**/*.{m,mm,cpp,h}",
@@ -103,9 +63,7 @@
     {
       "name": "core",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments -Wno-documentation",
       "source_files": "react/renderer/core/**/*.{m,mm,cpp,h}",
@@ -118,9 +76,7 @@
     {
       "name": "componentregistry",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/componentregistry/**/*.{m,mm,cpp,h}",
@@ -129,9 +85,7 @@
     {
       "name": "componentregistrynative",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/componentregistry/native/**/*.{m,mm,cpp,h}",
@@ -143,9 +97,7 @@
         {
           "name": "inputaccessory",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/inputaccessory/**/*.{m,mm,cpp,h}",
@@ -155,9 +107,7 @@
         {
           "name": "legacyviewmanagerinterop",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/legacyviewmanagerinterop/**/*.{m,mm,cpp,h}",
@@ -170,9 +120,7 @@
         {
           "name": "modal",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/modal/**/*.{m,mm,cpp,h}",
@@ -182,9 +130,7 @@
         {
           "name": "rncore",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/rncore/**/*.{m,mm,cpp,h}",
@@ -193,9 +139,7 @@
         {
           "name": "root",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/root/**/*.{m,mm,cpp,h}",
@@ -205,9 +149,7 @@
         {
           "name": "safeareaview",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/safeareaview/**/*.{m,mm,cpp,h}",
@@ -217,9 +159,7 @@
         {
           "name": "scrollview",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/scrollview/**/*.{m,mm,cpp,h}",
@@ -229,9 +169,7 @@
         {
           "name": "text",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/text/**/*.{m,mm,cpp,h}",
@@ -241,9 +179,7 @@
         {
           "name": "textinput",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/textinput/iostextinput/**/*.{m,mm,cpp,h}",
@@ -253,9 +189,7 @@
         {
           "name": "unimplementedview",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"]
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/unimplementedview/**/*.{m,mm,cpp,h}",
@@ -265,12 +199,8 @@
         {
           "name": "view",
           "dependencies": {
-            "RCT-Folly/Fabric": [
-              "2022.05.16.00"
-            ],
-            "Yoga": [
-
-            ]
+            "RCT-Folly/Fabric": ["2022.05.16.00"],
+            "Yoga": []
           },
           "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
           "source_files": "react/renderer/components/view/**/*.{m,mm,cpp,h}",
@@ -288,9 +218,7 @@
     {
       "name": "imagemanager",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/imagemanager/*.{m,mm,cpp,h}",
@@ -299,9 +227,7 @@
     {
       "name": "mounting",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/mounting/**/*.{m,mm,cpp,h}",
@@ -311,9 +237,7 @@
     {
       "name": "scheduler",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/scheduler/**/*.{m,mm,cpp,h}",
@@ -322,9 +246,7 @@
     {
       "name": "templateprocessor",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/templateprocessor/**/*.{m,mm,cpp,h}",
@@ -334,12 +256,8 @@
     {
       "name": "textlayoutmanager",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ],
-        "React-Fabric/uimanager": [
-
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"],
+        "React-Fabric/uimanager": []
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": [
@@ -356,9 +274,7 @@
     {
       "name": "uimanager",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/uimanager/**/*.{m,mm,cpp,h}",
@@ -368,9 +284,7 @@
     {
       "name": "telemetry",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/telemetry/**/*.{m,mm,cpp,h}",
@@ -380,9 +294,7 @@
     {
       "name": "leakchecker",
       "dependencies": {
-        "RCT-Folly/Fabric": [
-          "2022.05.16.00"
-        ]
+        "RCT-Folly/Fabric": ["2022.05.16.00"]
       },
       "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-gnu-zero-variadic-macro-arguments",
       "source_files": "react/renderer/leakchecker/**/*.{cpp,h}",

@@ -17,9 +17,7 @@
   },
   "static_framework": true,
   "dependencies": {
-    "ExpoModulesCore": [
-
-    ]
+    "ExpoModulesCore": []
   },
   "pod_target_xcconfig": {
     "DEFINES_MODULE": "YES",

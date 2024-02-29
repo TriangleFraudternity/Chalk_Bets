@@ -33,10 +33,7 @@
   "subspecs": [
     {
       "name": "Pre-built",
-      "preserve_paths": [
-        "destroot/bin/*",
-        "**/*.{h,c,cpp}"
-      ],
+      "preserve_paths": ["destroot/bin/*", "**/*.{h,c,cpp}"],
       "source_files": "destroot/include/hermes/**/*.h",
       "header_mappings_dir": "destroot/include",
       "ios": {

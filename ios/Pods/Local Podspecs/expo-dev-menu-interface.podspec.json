@@ -34,12 +34,8 @@
       },
       "source_files": "Tests/**/*.{h,m,swift}",
       "dependencies": {
-        "Quick": [
-
-        ],
-        "Nimble": [
-
-        ]
+        "Quick": [],
+        "Nimble": []
       }
     }
   ],

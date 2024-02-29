@@ -21,35 +21,15 @@
     "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/RCT-Folly\" \"$(PODS_ROOT)/boost\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-debug/React_debug.framework/Headers\""
   },
   "dependencies": {
-    "React-runtimeexecutor": [
-
-    ],
-    "React-callinvoker": [
-
-    ],
-    "React-cxxreact": [
-
-    ],
-    "React-rendererdebug": [
-
-    ],
-    "React-utils": [
-
-    ],
-    "glog": [
-
-    ],
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "React-jsi": [
-
-    ],
-    "React-debug": [
-
-    ],
-    "hermes-engine": [
-
-    ]
+    "React-runtimeexecutor": [],
+    "React-callinvoker": [],
+    "React-cxxreact": [],
+    "React-rendererdebug": [],
+    "React-utils": [],
+    "glog": [],
+    "RCT-Folly": ["2022.05.16.00"],
+    "React-jsi": [],
+    "React-debug": [],
+    "hermes-engine": []
   }
 }

@@ -13,48 +13,20 @@
     "git": "https://github.com/facebook/react-native.git",
     "tag": "v0.73.2"
   },
-  "preserve_paths": [
-    "package.json",
-    "LICENSE",
-    "LICENSE-docs"
-  ],
+  "preserve_paths": ["package.json", "LICENSE", "LICENSE-docs"],
   "cocoapods_version": ">= 1.10.1",
   "dependencies": {
-    "React-Core": [
-      "0.73.2"
-    ],
-    "React-Core/DevSupport": [
-      "0.73.2"
-    ],
-    "React-Core/RCTWebSocket": [
-      "0.73.2"
-    ],
-    "React-RCTActionSheet": [
-      "0.73.2"
-    ],
-    "React-RCTAnimation": [
-      "0.73.2"
-    ],
-    "React-RCTBlob": [
-      "0.73.2"
-    ],
-    "React-RCTImage": [
-      "0.73.2"
-    ],
-    "React-RCTLinking": [
-      "0.73.2"
-    ],
-    "React-RCTNetwork": [
-      "0.73.2"
-    ],
-    "React-RCTSettings": [
-      "0.73.2"
-    ],
-    "React-RCTText": [
-      "0.73.2"
-    ],
-    "React-RCTVibration": [
-      "0.73.2"
-    ]
+    "React-Core": ["0.73.2"],
+    "React-Core/DevSupport": ["0.73.2"],
+    "React-Core/RCTWebSocket": ["0.73.2"],
+    "React-RCTActionSheet": ["0.73.2"],
+    "React-RCTAnimation": ["0.73.2"],
+    "React-RCTBlob": ["0.73.2"],
+    "React-RCTImage": ["0.73.2"],
+    "React-RCTLinking": ["0.73.2"],
+    "React-RCTNetwork": ["0.73.2"],
+    "React-RCTSettings": ["0.73.2"],
+    "React-RCTText": ["0.73.2"],
+    "React-RCTVibration": ["0.73.2"]
   }
 }

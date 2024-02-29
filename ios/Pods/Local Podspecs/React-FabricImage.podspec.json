@@ -22,56 +22,22 @@
     "HEADER_SEARCH_PATHS": "\"$(PODS_ROOT)/boost\" \"$(PODS_TARGET_SRCROOT)/ReactCommon\" \"$(PODS_ROOT)/RCT-Folly\" \"$(PODS_ROOT)/Headers/Private/Yoga\" \"$(PODS_ROOT)/DoubleConversion\" \"$(PODS_ROOT)/fmt/include\" \"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/imagemanager/platform/ios\" \"${PODS_CONFIGURATION_BUILD_DIR}/React-rendererdebug/React_rendererdebug.framework/Headers\""
   },
   "dependencies": {
-    "RCT-Folly/Fabric": [
-      "2022.05.16.00"
-    ],
-    "React-jsiexecutor": [
-      "0.73.2"
-    ],
-    "RCTRequired": [
-      "0.73.2"
-    ],
-    "RCTTypeSafety": [
-      "0.73.2"
-    ],
-    "React-jsi": [
-
-    ],
-    "React-logger": [
-
-    ],
-    "glog": [
-
-    ],
-    "DoubleConversion": [
-
-    ],
-    "fmt": [
-      "~> 6.2.1"
-    ],
-    "React-ImageManager": [
-
-    ],
-    "React-utils": [
-
-    ],
-    "Yoga": [
-
-    ],
-    "ReactCommon": [
-
-    ],
-    "React-graphics": [
-
-    ],
-    "React-Fabric": [
-
-    ],
-    "React-rendererdebug": [
-
-    ],
-    "hermes-engine": [
-
-    ]
+    "RCT-Folly/Fabric": ["2022.05.16.00"],
+    "React-jsiexecutor": ["0.73.2"],
+    "RCTRequired": ["0.73.2"],
+    "RCTTypeSafety": ["0.73.2"],
+    "React-jsi": [],
+    "React-logger": [],
+    "glog": [],
+    "DoubleConversion": [],
+    "fmt": ["~> 6.2.1"],
+    "React-ImageManager": [],
+    "React-utils": [],
+    "Yoga": [],
+    "ReactCommon": [],
+    "React-graphics": [],
+    "React-Fabric": [],
+    "React-rendererdebug": [],
+    "hermes-engine": []
   }
 }

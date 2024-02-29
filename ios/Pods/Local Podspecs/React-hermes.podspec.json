@@ -26,38 +26,16 @@
   },
   "header_dir": "reacthermes",
   "dependencies": {
-    "React-cxxreact": [
-      "0.73.2"
-    ],
-    "React-jsiexecutor": [
-      "0.73.2"
-    ],
-    "React-jsinspector": [
-      "0.73.2"
-    ],
-    "React-perflogger": [
-      "0.73.2"
-    ],
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "DoubleConversion": [
-
-    ],
-    "fmt": [
-      "~> 6.2.1"
-    ],
-    "glog": [
-
-    ],
-    "RCT-Folly/Futures": [
-      "2022.05.16.00"
-    ],
-    "hermes-engine": [
-
-    ],
-    "React-jsi": [
-
-    ]
+    "React-cxxreact": ["0.73.2"],
+    "React-jsiexecutor": ["0.73.2"],
+    "React-jsinspector": ["0.73.2"],
+    "React-perflogger": ["0.73.2"],
+    "RCT-Folly": ["2022.05.16.00"],
+    "DoubleConversion": [],
+    "fmt": ["~> 6.2.1"],
+    "glog": [],
+    "RCT-Folly/Futures": ["2022.05.16.00"],
+    "hermes-engine": [],
+    "React-jsi": []
   }
 }
