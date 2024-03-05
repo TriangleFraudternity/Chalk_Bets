@@ -9,10 +9,10 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 // Custom Components
 import {NewBetButton, NewBetPage} from "./NewBetPopup.js";
 import {TabNavigation} from "./TabNavigation.js";
-import SettingsScreen from "../pages/SettingsScreen.js";
-import LoginScreen from "../pages/LoginScreen.js";
-import ForgorPasswordScreen from "../pages/ForgorPasswordScreen.js";
-import SignUpScreen from "../pages/SignupScreen.js";
+import SettingsScreen from "../pages/Settings/SettingsScreen.js";
+import LoginScreen from "../pages/OpeningScreens/LoginScreen.js";
+import ForgorPasswordScreen from "../pages/OpeningScreens/forgorPasswordScreen.js";
+import SignUpScreen from "../pages/OpeningScreens/SignupScreen.js";
 import styles from "../assets/styling.js";
 
 //Create Navigation

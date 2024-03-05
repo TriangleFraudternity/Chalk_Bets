@@ -7,30 +7,45 @@ import {
     StyleSheet,
     Dimensions,
     TouchableOpacity,
+    TextInput,
+    Switch
 } from "react-native";
-import {React} from "react";
+import {React, useState } from "react";
 import PropTypes from "prop-types";
+import {GroupsDropdown} from "../pages/Groups/GroupsDropdown.js";
 
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 // New Bet Page Component
 function NewBetPage({isVisible, onClose}) {
+
+    const [betName, setBetName] = useState("");
+    const [isEnabled, setIsEnabled] = useState(false);
+
+    const toggleSwitch = () => {
+        setIsEnabled(previousState => !previousState);
+    };
+
     return (
         <Modal
             animationType="slide"
             transparent={true}
             visible={isVisible}
             onRequestClose={onClose}>
-            <View style={{flex: 1, backgroundColor: "#000000"}}>
+            <View style={{flex: 1, backgroundColor: "#400002"}}>
                 <View
                     style={{
                         flexDirection: "row",
-                        justifyContent: "space-between",
+                        justifyContent: "left",
                         padding: 16,
+                        alignItems: "flex-start",
                     }}>
                     <Text style={{fontSize: 20, fontWeight: "bold", color: "#FFF"}}>
-            Modal Title
+                        Create New Bet
                     </Text>
+                    <Image source={require("../assets/Money.png")} style={{width: 24, height: 24}} />
+
+
                     <TouchableOpacity onPress={onClose}>
                         <MaterialCommunityIcons name="close" color="#FFF" size={24} />
                     </TouchableOpacity>
@@ -41,11 +56,23 @@ function NewBetPage({isVisible, onClose}) {
                         backgroundColor: "#FFF",
                         borderTopLeftRadius: 20,
                         borderTopRightRadius: 20,
+                        padding: 16
                     }}>
-                    <Text>BBIG RED DOG</Text>
-                    <Image
-                        source={require("../assets/icons/close.png")}
-                        style={{flex: 1, resizeMode: "cover"}}
+                    <Text style={{ fontSize: 16, marginBottom: 8 }}>Bet Name</Text>
+                    {/* TextInput for entering bet name */}
+                    <TextInput
+                        style={{ marginLeft: 5, height: 40, borderColor: "gray", borderWidth: 1, marginBottom: 16, color: "black" }}
+                        onChangeText={text => setBetName(text)}
+                        value={betName}
+                        placeholder="Name your bet"
+                        placeholderTextColor="gray"
+                    />
+                    <GroupsDropdown/>
+                    <Switch
+                        trackColor={{ false: "#FF0000", true: "#00FF00" }}
+                        thumbColor={isEnabled ? "#00FF00" : "#FF0000"}
+                        onValueChange={toggleSwitch}
+                        value={isEnabled}
                     />
                 </View>
             </View>

@@ -1,14 +1,18 @@
 // Import necessary React and React Native components
 import React from "react";
-import {View, Text, StyleSheet} from "react-native";
+import {View, Text, StyleSheet, TouchableOpacity} from "react-native";
 
 // Create a functional component for the page
 const GroupsScreen = () => {
     return (
     // Use the View component as a container
         <View style={styles.container}>
-            {/* Display a text element */}
-            <Text style={styles.text}>AHHHHHH</Text>
+            <TouchableOpacity onPress={togglePopup}>
+                <View style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>Create Channel</Text>
+                </View>
+            </TouchableOpacity>
+            {isPopupVisible && <GroupsScreen />} {/* Render the CreateChannelPopup component */}
         </View>
     );
 };
