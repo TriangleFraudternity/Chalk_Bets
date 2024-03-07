@@ -18,12 +18,8 @@
   "cocoapods_version": ">= 1.10.2",
   "source_files": "ios/**/*.{h,m}",
   "dependencies": {
-    "React-Core": [
-
-    ],
-    "Firebase/CoreOnly": [
-      "10.19.0"
-    ]
+    "React-Core": [],
+    "Firebase/CoreOnly": ["10.19.0"]
   },
   "static_framework": false
 }

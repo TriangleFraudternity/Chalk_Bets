@@ -15,8 +15,6 @@
   "source_files": "**/*.{cpp,h}",
   "header_dir": "ReactCommon",
   "dependencies": {
-    "React-jsi": [
-      "0.73.2"
-    ]
+    "React-jsi": ["0.73.2"]
   }
 }

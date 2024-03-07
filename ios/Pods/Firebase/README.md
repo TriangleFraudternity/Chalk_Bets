@@ -61,12 +61,14 @@ All official releases are tagged in this repo and available via CocoaPods. To ac
 source snapshot or unreleased branch, use Podfile directives like the following:
 
 To access FirebaseFirestore via a branch:
+
 ```ruby
 pod 'FirebaseCore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :branch => 'master'
 pod 'FirebaseFirestore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :branch => 'master'
 ```
 
 To access FirebaseMessaging via a checked-out version of the firebase-ios-sdk repo:
+
 ```ruby
 pod 'FirebaseCore', :path => '/path/to/firebase-ios-sdk'
 pod 'FirebaseMessaging', :path => '/path/to/firebase-ios-sdk'
@@ -86,7 +88,7 @@ For details on using Firebase from a Framework or a library, refer to [firebase_
 To develop Firebase software in this repository, ensure that you have at least
 the following software:
 
-* Xcode 14.1 (or later)
+- Xcode 14.1 (or later)
 
 CocoaPods is still the canonical way to develop, but much of the repo now supports
 development with Swift Package Manager.
@@ -94,8 +96,9 @@ development with Swift Package Manager.
 ### CocoaPods
 
 Install the following:
-* CocoaPods 1.10.0 (or later)
-* [CocoaPods generate](https://github.com/square/cocoapods-generate)
+
+- CocoaPods 1.10.0 (or later)
+- [CocoaPods generate](https://github.com/square/cocoapods-generate)
 
 For the pod that you want to develop:
 
@@ -114,26 +117,29 @@ Firestore has a self-contained Xcode project. See
 [Firestore/README](Firestore/README.md) Markdown file.
 
 #### Development for Catalyst
-* `pod gen {name here}.podspec --local-sources=./ --auto-open --platforms=ios`
-* Check the Mac box in the App-iOS Build Settings
-* Sign the App in the Settings Signing & Capabilities tab
-* Click Pods in the Project Manager
-* Add Signing to the iOS host app and unit test targets
-* Select the Unit-unit scheme
-* Run it to build and test
+
+- `pod gen {name here}.podspec --local-sources=./ --auto-open --platforms=ios`
+- Check the Mac box in the App-iOS Build Settings
+- Sign the App in the Settings Signing & Capabilities tab
+- Click Pods in the Project Manager
+- Add Signing to the iOS host app and unit test targets
+- Select the Unit-unit scheme
+- Run it to build and test
 
 Alternatively, disable signing in each target:
-* Go to Build Settings tab
-* Click `+`
-* Select `Add User-Defined Setting`
-* Add `CODE_SIGNING_REQUIRED` setting with a value of `NO`
+
+- Go to Build Settings tab
+- Click `+`
+- Select `Add User-Defined Setting`
+- Add `CODE_SIGNING_REQUIRED` setting with a value of `NO`
 
 ### Swift Package Manager
-* To enable test schemes: `./scripts/setup_spm_tests.sh`
-* `open Package.swift` or double click `Package.swift` in Finder.
-* Xcode will open the project
-  * Choose a scheme for a library to build or test suite to run
-  * Choose a target platform by selecting the run destination along with the scheme
+
+- To enable test schemes: `./scripts/setup_spm_tests.sh`
+- `open Package.swift` or double click `Package.swift` in Finder.
+- Xcode will open the project
+  - Choose a scheme for a library to build or test suite to run
+  - Choose a target platform by selecting the run destination along with the scheme
 
 ### Adding a New Firebase Pod
 
@@ -162,6 +168,7 @@ brew install mint
 Select a scheme and press Command-u to build a component and run its unit tests.
 
 ### Running Sample Apps
+
 To run the sample apps and integration tests, you'll need a valid
 `GoogleService-Info.plist
 ` file. The Firebase Xcode project contains dummy plist
@@ -171,7 +178,7 @@ files without real values, but they can be replaced with real plist files. To ge
 1. Go to the [Firebase Console](https://console.firebase.google.com/)
 2. Create a new Firebase project, if you don't already have one
 3. For each sample app you want to test, create a new Firebase app with the sample app's bundle
-identifier (e.g., `com.google.Database-Example`)
+   identifier (e.g., `com.google.Database-Example`)
 4. Download the resulting `GoogleService-Info.plist` and add it to the Xcode project.
 
 ### Coverage Report Generation
@@ -179,6 +186,7 @@ identifier (e.g., `com.google.Database-Example`)
 For coverage report generation instructions, see [scripts/code_coverage_report/README](scripts/code_coverage_report/README.md) Markdown file.
 
 ## Specific Component Instructions
+
 See the sections below for any special instructions for those components.
 
 ### Firebase Auth
@@ -217,11 +225,11 @@ Push notifications can only be delivered to specially provisioned App IDs in the
 In order to test receiving push notifications, you will need to:
 
 1. Change the bundle identifier of the sample app to something you own in your Apple Developer
-account and enable that App ID for push notifications.
+   account and enable that App ID for push notifications.
 2. You'll also need to
-[upload your APNs Provider Authentication Key or certificate to the
-Firebase Console](https://firebase.google.com/docs/cloud-messaging/ios/certs)
-at **Project Settings > Cloud Messaging > [Your Firebase App]**.
+   [upload your APNs Provider Authentication Key or certificate to the
+   Firebase Console](https://firebase.google.com/docs/cloud-messaging/ios/certs)
+   at **Project Settings > Cloud Messaging > [Your Firebase App]**.
 3. Ensure your iOS device is added to your Apple Developer portal as a test device.
 
 #### iOS Simulator
@@ -240,6 +248,7 @@ a few gaps, especially on watchOS. For details about the current support matrix,
 in Firebase's documentation.
 
 ### watchOS
+
 Thanks to contributions from the community, many of Firebase SDKs now compile, run unit tests, and
 work on watchOS. See the [Independent Watch App Sample](Example/watchOSSample).
 
@@ -253,10 +262,12 @@ app has communicated with our servers". This relies on Analytics and will not wo
 **It's safe to ignore the message and continue**, the rest of the SDKs will work as expected.
 
 #### Additional Crashlytics Notes
-* watchOS has limited support. Due to watchOS restrictions, mach exceptions and signal crashes are
-not recorded. (Crashes in SwiftUI are generated as mach exceptions, so will not be recorded)
+
+- watchOS has limited support. Due to watchOS restrictions, mach exceptions and signal crashes are
+  not recorded. (Crashes in SwiftUI are generated as mach exceptions, so will not be recorded)
 
 ## Combine
+
 Thanks to contributions from the community, _FirebaseCombineSwift_ contains support for Apple's Combine
 framework. This module is currently under development and not yet supported for use in production
 environments. For more details, please refer to the [docs](FirebaseCombineSwift/README.md).

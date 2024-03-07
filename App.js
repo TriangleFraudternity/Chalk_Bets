@@ -1,11 +1,9 @@
 // App.js
-import React from 'react';
-import Navigation from './navigation/navigation'
+import React from "react";
+import Navigation from "./navigation/navigation";
 
 const App = () => {
-  return (
-    <Navigation/>
-  );
+    return <Navigation />;
 };
 
 export default App;

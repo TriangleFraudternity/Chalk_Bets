@@ -35,47 +35,23 @@
     ]
   },
   "dependencies": {
-    "React-Core": [
-
-    ],
-    "ReactCommon/turbomodule/core": [
-
-    ],
-    "React-RCTAppDelegate": [
-
-    ],
-    "React-NativeModulesApple": [
-
-    ],
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "glog": [
-
-    ]
+    "React-Core": [],
+    "ReactCommon/turbomodule/core": [],
+    "React-RCTAppDelegate": [],
+    "React-NativeModulesApple": [],
+    "RCT-Folly": ["2022.05.16.00"],
+    "glog": []
   },
   "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32 -DREACT_NATIVE_MINOR_VERSION=73",
-  "source_files": [
-    "ios/**/*.{h,m,mm,swift,cpp}",
-    "common/cpp/**/*.{h,cpp}"
-  ],
-  "exclude_files": [
-    "ios/Tests/",
-    "ios/Fabric/",
-    "common/cpp/fabric/"
-  ],
-  "private_header_files": [
-    "ios/**/*+Private.h",
-    "ios/**/Swift.h"
-  ],
+  "source_files": ["ios/**/*.{h,m,mm,swift,cpp}", "common/cpp/**/*.{h,cpp}"],
+  "exclude_files": ["ios/Tests/", "ios/Fabric/", "common/cpp/fabric/"],
+  "private_header_files": ["ios/**/*+Private.h", "ios/**/Swift.h"],
   "testspecs": [
     {
       "name": "Tests",
       "test_type": "unit",
       "dependencies": {
-        "ExpoModulesTestCore": [
-
-        ]
+        "ExpoModulesTestCore": []
       },
       "source_files": "ios/Tests/**/*.{m,swift}"
     }

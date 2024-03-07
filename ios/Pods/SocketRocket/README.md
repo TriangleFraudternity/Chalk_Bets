@@ -13,8 +13,8 @@ A conforming WebSocket ([RFC 6455](https://tools.ietf.org/html/rfc6455>)) client
 Test results for SocketRocket [here](http://facebook.github.io/SocketRocket/results/).
 You can compare to what modern browsers look like [here](http://autobahn.ws/testsuite/reports/clients/index.html).
 
-SocketRocket currently conforms to all core ~300 of [Autobahn](http://autobahn.ws/testsuite/>)'s fuzzing tests 
-(aside from two UTF-8 ones where it is merely *non-strict* tests 6.4.2 and 6.4.4).
+SocketRocket currently conforms to all core ~300 of [Autobahn](http://autobahn.ws/testsuite/>)'s fuzzing tests
+(aside from two UTF-8 ones where it is merely _non-strict_ tests 6.4.2 and 6.4.4).
 
 ## Features/Design
 
@@ -33,19 +33,23 @@ There are a few options. Choose one, or just figure it out:
 
 - **[CocoaPods](https://cocoapods.org)**
 
- Add the following line to your Podfile:
- ```ruby
- pod 'SocketRocket'
- ```
- Run `pod install`, and you are all set.
-  
+Add the following line to your Podfile:
+
+```ruby
+pod 'SocketRocket'
+```
+
+Run `pod install`, and you are all set.
+
 - **[Carthage](https://github.com/carthage/carthage)**
 
- Add the following line to your Cartfile:
- ```
- github "facebook/SocketRocket"
- ```
- Run `carthage update`, and you should now have the latest version of `SocketRocket` in your `Carthage` folder.
+Add the following line to your Cartfile:
+
+```
+github "facebook/SocketRocket"
+```
+
+Run `carthage update`, and you should now have the latest version of `SocketRocket` in your `Carthage` folder.
 
 - **Using SocketRocket as a sub-project**
 
@@ -114,11 +118,13 @@ Included are setup scripts for the python testing environment.
 It comes packaged with vitualenv so all the dependencies are installed in userland.
 
 To run the short test from the command line, run:
+
 ```bash
   make test
 ```
 
 To run all the tests, run:
+
 ```bash
   make test_all
 ```
@@ -126,7 +132,7 @@ To run all the tests, run:
 The short tests don't include the performance tests
 (the test harness is actually the bottleneck, not SocketRocket).
 
-The first time this is run, it may take a while to install the dependencies. It will be smooth sailing after that. 
+The first time this is run, it may take a while to install the dependencies. It will be smooth sailing after that.
 
 You can also run tests inside Xcode, which runs the same thing, but makes it easier to debug.
 
@@ -143,8 +149,8 @@ It will "chat" with a listening websocket on port 9900.
 
 The sever takes a message and broadcasts it to all other connected clients.
 
-It requires some dependencies though to run. 
-We also want to reuse the virtualenv we made when we ran the tests. 
+It requires some dependencies though to run.
+We also want to reuse the virtualenv we made when we ran the tests.
 If you haven't run the tests yet, go into the SocketRocket root directory and type:
 
 ```bash
@@ -181,7 +187,6 @@ It should say "Connected!" on top.
 
 To talk with the app, open up your browser to [http://localhost:9000](http://localhost:9000) and start chatting.
 
-
 ## WebSocket Server Implementation Recommendations
 
 SocketRocket has been used with the following libraries:
@@ -190,25 +195,21 @@ SocketRocket has been used with the following libraries:
 - Go's [WebSocket package](https://godoc.org/golang.org/x/net/websocket) or Gorilla's [version](http://www.gorillatoolkit.org/pkg/websocket).
 - [Autobahn](http://autobahn.ws/testsuite/) (using its fuzzing client).
 
-The Tornado one is dirt simple and works like a charm. 
+The Tornado one is dirt simple and works like a charm.
 ([IPython notebook](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html) uses it too).
 It's much easier to configure handlers and routes than in Autobahn/twisted.
 
 ## Contributing
 
-We’re glad you’re interested in SocketRocket, and we’d love to see where you take it. 
+We’re glad you’re interested in SocketRocket, and we’d love to see where you take it.
 Please read our [contributing guidelines](https://github.com/facebook/SocketRocket/blob/master/CONTRIBUTING.md) prior to submitting a Pull Request.
 
- [build-status-svg]: https://img.shields.io/travis/facebook/SocketRocket/master.svg
- [build-status-link]: https://travis-ci.org/facebook/SocketRocket/branches
-
- [license-svg]: https://img.shields.io/badge/license-BSD-lightgrey.svg
- [license-link]: https://github.com/facebook/SocketRocket/blob/master/LICENSE
-
- [podspec-svg]: https://img.shields.io/cocoapods/v/SocketRocket.svg
- [podspec-link]: https://cocoapods.org/pods/SocketRocket
- 
- [carthage-svg]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
- [carthage-link]: https://github.com/carthage/carthage
-
- [platforms-svg]: http://img.shields.io/cocoapods/p/SocketRocket.svg?style=flat
+[build-status-svg]: https://img.shields.io/travis/facebook/SocketRocket/master.svg
+[build-status-link]: https://travis-ci.org/facebook/SocketRocket/branches
+[license-svg]: https://img.shields.io/badge/license-BSD-lightgrey.svg
+[license-link]: https://github.com/facebook/SocketRocket/blob/master/LICENSE
+[podspec-svg]: https://img.shields.io/cocoapods/v/SocketRocket.svg
+[podspec-link]: https://cocoapods.org/pods/SocketRocket
+[carthage-svg]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
+[carthage-link]: https://github.com/carthage/carthage
+[platforms-svg]: http://img.shields.io/cocoapods/p/SocketRocket.svg?style=flat

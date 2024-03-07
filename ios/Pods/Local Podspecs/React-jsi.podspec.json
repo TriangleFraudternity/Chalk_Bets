@@ -19,24 +19,12 @@
     "DEFINES_MODULE": "YES"
   },
   "dependencies": {
-    "boost": [
-      "1.83.0"
-    ],
-    "DoubleConversion": [
-
-    ],
-    "fmt": [
-      "~> 6.2.1"
-    ],
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "glog": [
-
-    ],
-    "hermes-engine": [
-
-    ]
+    "boost": ["1.83.0"],
+    "DoubleConversion": [],
+    "fmt": ["~> 6.2.1"],
+    "RCT-Folly": ["2022.05.16.00"],
+    "glog": [],
+    "hermes-engine": []
   },
   "source_files": "**/*.{cpp,h}",
   "exclude_files": [

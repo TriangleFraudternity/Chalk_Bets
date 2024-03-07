@@ -46,33 +46,15 @@
     "HEADER_SEARCH_PATHS": "\"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-launcher/Swift Compatibility Header\""
   },
   "dependencies": {
-    "React-Core": [
-
-    ],
-    "React-RCTAppDelegate": [
-
-    ],
-    "expo-dev-menu-interface": [
-
-    ],
-    "EXManifests": [
-
-    ],
-    "EXUpdatesInterface": [
-
-    ],
-    "expo-dev-menu": [
-
-    ],
-    "ExpoModulesCore": [
-
-    ],
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "glog": [
-
-    ]
+    "React-Core": [],
+    "React-RCTAppDelegate": [],
+    "expo-dev-menu-interface": [],
+    "EXManifests": [],
+    "EXUpdatesInterface": [],
+    "expo-dev-menu": [],
+    "ExpoModulesCore": [],
+    "RCT-Folly": ["2022.05.16.00"],
+    "glog": []
   },
   "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -Wno-comma -Wno-shorten-64-to-32",
   "default_subspecs": "Main",
@@ -82,21 +64,11 @@
       "test_type": "unit",
       "source_files": "ios/Tests/**/*.{h,m,mm,swift}",
       "dependencies": {
-        "Quick": [
-
-        ],
-        "Nimble": [
-
-        ],
-        "React-CoreModules": [
-
-        ],
-        "OHHTTPStubs": [
-
-        ],
-        "ExpoModulesTestCore": [
-
-        ]
+        "Quick": [],
+        "Nimble": [],
+        "React-CoreModules": [],
+        "OHHTTPStubs": [],
+        "ExpoModulesTestCore": []
       }
     }
   ],
@@ -109,9 +81,7 @@
     {
       "name": "Main",
       "dependencies": {
-        "expo-dev-launcher/Unsafe": [
-
-        ]
+        "expo-dev-launcher/Unsafe": []
       }
     }
   ],

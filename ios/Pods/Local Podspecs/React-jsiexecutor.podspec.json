@@ -20,29 +20,13 @@
   },
   "header_dir": "jsireact",
   "dependencies": {
-    "React-cxxreact": [
-      "0.73.2"
-    ],
-    "React-jsi": [
-      "0.73.2"
-    ],
-    "React-perflogger": [
-      "0.73.2"
-    ],
-    "RCT-Folly": [
-      "2022.05.16.00"
-    ],
-    "DoubleConversion": [
-
-    ],
-    "fmt": [
-      "~> 6.2.1"
-    ],
-    "glog": [
-
-    ],
-    "hermes-engine": [
-
-    ]
+    "React-cxxreact": ["0.73.2"],
+    "React-jsi": ["0.73.2"],
+    "React-perflogger": ["0.73.2"],
+    "RCT-Folly": ["2022.05.16.00"],
+    "DoubleConversion": [],
+    "fmt": ["~> 6.2.1"],
+    "glog": [],
+    "hermes-engine": []
   }
 }
