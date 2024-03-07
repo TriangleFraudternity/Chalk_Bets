@@ -37,7 +37,8 @@
     "react-native-screens": "~3.10.1",
     "react-native-svg": "12.1.1",
     "react-native-web": "~0.19.6",
-    "rsuite": "^5.53.0"
+    "rsuite": "^5.53.0",
+    "vector-icons": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
