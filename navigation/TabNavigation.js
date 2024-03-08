@@ -2,7 +2,7 @@ import {React, useState} from "react";
 
 import styles from "../assets/styling.js";
 
-import {NewBetButton, NewBetPage} from "./NewBetPopup.js";
+import {NewBetButton, NewBetPopup} from "./NewBetPopup.js";
 
 import {
     Image,
@@ -19,13 +19,13 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-import GroupsScreen from "../pages/GroupsScreen.js";
-import SettingsScreen from "../pages/SettingsScreen.js";
-import LoginScreen from "../pages/LoginScreen.js";
-import ForgorPasswordScreen from "../pages/ForgorPasswordScreen.js";
-import SignUpScreen from "../pages/SignupScreen.js";
-import HomeScreen from "../pages/HomeScreen.js";
-import PaymentsScreen from "../pages/PaymentsScreen.js";
+import GroupsScreen from "../pages/Groups/GroupsScreen.js";
+import SettingsScreen from "../pages/Settings/SettingsScreen.js";
+import LoginScreen from "../pages/OpeningScreens/LoginScreen.js";
+import ForgorPasswordScreen from "../pages/OpeningScreens/ForgorPasswordScreen.js";
+import SignUpScreen from "../pages/OpeningScreens/SignupScreen.js";
+import HomeScreen from "../pages/OpeningScreens/HomeScreen.js";
+import PaymentsScreen from "../pages/Payments/PaymentsScreen.js";
 
 // Bottom Nav-Bar functionality
 const Tab = createBottomTabNavigator();
@@ -120,7 +120,7 @@ function TabNavigation() {
                     }}
                 />
             </Tab.Navigator>
-            <NewBetPage
+            <NewBetPopup
                 isVisible={isBottomSheetOpen}
                 onClose={handleCloseBottomSheet}
             />

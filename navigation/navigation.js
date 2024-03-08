@@ -11,7 +11,7 @@ import {NewBetButton, NewBetPage} from "./NewBetPopup.js";
 import {TabNavigation} from "./TabNavigation.js";
 import SettingsScreen from "../pages/Settings/SettingsScreen.js";
 import LoginScreen from "../pages/OpeningScreens/LoginScreen.js";
-import ForgorPasswordScreen from "../pages/OpeningScreens/forgorPasswordScreen.js";
+import ForgorPasswordScreen from "../pages/OpeningScreens/ForgorPasswordScreen.js";
 import SignUpScreen from "../pages/OpeningScreens/SignupScreen.js";
 import styles from "../assets/styling.js";
 
