@@ -16,7 +16,7 @@ const firebaseapp =  {
     messagingSenderId: "761565960474",
     appId: "1:761565960474:web:82826465f5fd5daf0eb4a3",
     measurementId: "G-3FSC8S7HYN"
-}
+};
 
-const dbApp = initializeApp(firebaseapp)
-const chalkbetsDB = getDatabase(dbApp)
+const dbApp = initializeApp(firebaseapp);
+const chalkbetsDB = getDatabase(dbApp);

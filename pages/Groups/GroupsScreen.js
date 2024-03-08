@@ -7,6 +7,8 @@ import { NewBetButton } from "../../navigation/NewBetPopup.js";
 
 import { Ionicons } from "@expo/vector-icons";
 
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 // Create a functional component for the page
 const GroupsScreen = () => {
 
@@ -46,9 +48,22 @@ const CreateNewGroupButton = ({ handleOpenNewGroupSheet }) => {
 };
 
 const Header = ({handleOpenNewGroupSheet}) => {
+
+    const auth = getAuth();
+    console.log(auth);
+    const [currentUser, setCurrentUser ] = useState();
+    onAuthStateChanged(auth, (user) => {
+        console.log(user);
+        if (user) {
+            setCurrentUser(user.name + "'s Groups");
+            console.log("Success");
+        } else {
+            console.log("Fail");
+        }
+    });
     return (
         <View style={styles.header}>
-            <Text style={styles.headerText}>Groups</Text>
+            <Text style={styles.headerText}>{currentUser}</Text>
             <CreateNewGroupButton handleOpenNewGroupSheet = {handleOpenNewGroupSheet} />
         </View>
     );
