@@ -37,13 +37,14 @@
     "react-native-screens": "~3.10.1",
     "react-native-svg": "12.1.1",
     "react-native-web": "~0.19.6",
-    "rsuite": "^5.53.0"
+    "rsuite": "^5.53.0",
+    "vector-icons": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/eslint-parser": "^7.23.10",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-native": "^4.1.0"
   },
   "private": true

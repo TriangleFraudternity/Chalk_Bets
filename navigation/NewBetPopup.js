@@ -17,7 +17,7 @@ import {GroupsDropdown} from "../pages/Groups/GroupsDropdown.js";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 // New Bet Page Component
-function NewBetPage({isVisible, onClose}) {
+function NewBetPopup({isVisible, onClose}) {
 
     const [betName, setBetName] = useState("");
     const [isEnabled, setIsEnabled] = useState(false);
@@ -79,7 +79,7 @@ function NewBetPage({isVisible, onClose}) {
         </Modal>
     );
 }
-NewBetPage.propTypes = {
+NewBetPopup.propTypes = {
     isVisible: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
 };
@@ -109,4 +109,4 @@ NewBetButton.propTypes = {
     onPress: PropTypes.func.isRequired,
 };
 
-export {NewBetPage, NewBetButton};
+export {NewBetPopup, NewBetButton};

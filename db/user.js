@@ -1,9 +1,9 @@
 // import {dbApp} from "../firebaseConfig"
 
-var ref = new Firebase(dbApp.databaseURL)
+var ref = new Firebase(dbApp.databaseURL);
 
 function createNewUser(userData){
-    var userRef = ref.child('users')
+    var userRef = ref.child("users");
 
     userRef.push({
         name: userData.name,
@@ -13,12 +13,10 @@ function createNewUser(userData){
         groups: [],
         bets: [],
         balance: 0
-    })
+    });
 }
 
 function userJoinGroup(userID, groupID){
-    var userRef = chalkbetsDB.child(`users/${userID}`)
-    var groupRef = ref.child(`groups/${groupID}`)
-
-
+    var userRef = chalkbetsDB.child(`users/${userID}`);
+    var groupRef = ref.child(`groups/${groupID}`);
 }

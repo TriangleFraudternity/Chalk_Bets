@@ -1,36 +1,44 @@
 // LoginScreen.js
 
-import React, {useState} from "react";
-import {View, Text, TextInput, Button, StyleSheet} from "react-native";
-import PropTypes from "prop-types";
+import React, { useState } from "react";
+import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 
-import {signInWithEmailAndPassword} from "firebase/auth";
+import {getAuth,signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../config/firebase.js";
 
-const LoginScreen = ({navigation}) => {
+
+const LoginScreen = ({ navigation }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const loginMessages = "Wrong credentials entered";
+    const [displayLoginMessage, setDisplayLoginMessage] = useState(false);
+    const auth = getAuth();
+
 
     const handleLogin = () => {
-    // For simplicity, let's just log the email and password for now
+
+        // For simplicity, let's just log the email and password for now
         console.log("Email:", email);
         console.log("Password:", password);
 
         // Add logic to authenticate the user
         // You can send the login credentials to your backend for validation
         signInWithEmailAndPassword(auth, email, password)
-            .then(userCredential => {
-                // Signed in
+            .then((userCredential) => {
+            // Signed in
                 const user = userCredential.user;
-                // ...
+                navigation.navigate("TabNavigation");
             })
-            .catch(error => {
+            .catch((error) => {
+                setDisplayLoginMessage(true);
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                console.log(errorCode);
+                console.log(errorMessage);
             });
 
         // Navigate to the next screen (you can replace 'HomeScreen' with your desired screen)
-        navigation.navigate("TabNavigation");
+    
     };
 
     return (
@@ -39,7 +47,7 @@ const LoginScreen = ({navigation}) => {
             <TextInput
                 style={styles.input}
                 value={email}
-                onChangeText={text => setEmail(text)}
+                onChangeText={(text) => setEmail(text)}
                 placeholder="Enter your email"
                 keyboardType="email-address"
             />
@@ -48,28 +56,29 @@ const LoginScreen = ({navigation}) => {
             <TextInput
                 style={styles.input}
                 value={password}
-                onChangeText={text => setPassword(text)}
+                onChangeText={(text) => setPassword(text)}
                 placeholder="Enter your password"
                 secureTextEntry
             />
 
-            <Button
-                title="Login"
-                onPress={() => navigation.navigate("TabNavigation")}
-            />
+            <Text style={styles.label}>{displayLoginMessage ? loginMessages : "chill in "} </Text>
+
+            <Button title="Login" onPress={() => handleLogin()}/>
+      
+            <Text style={styles.signupText}>
+                <Text style={styles.signupLink} onPress={() => navigation.navigate("ForgorPasswordScreen")}>
+        Forgor Password?
+                </Text>
+            </Text>
 
             <Text style={styles.signupText}>
-                <Text
-                    style={styles.signupLink}
-                    onPress={() => navigation.navigate("SignUpScreen")}>
+        Don't have an account?{" "}
+                <Text style={styles.signupLink} onPress={() => navigation.navigate("SignUpScreen")}>
           Sign up
                 </Text>
             </Text>
         </View>
     );
-};
-LoginScreen.propTypes = {
-    navigation: PropTypes.string.isRequired,
 };
 
 const styles = StyleSheet.create({

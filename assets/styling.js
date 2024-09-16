@@ -6,7 +6,7 @@ import {StyleSheet, Text, View} from "react-native";
 //Chalk White:          '#FFFEF9'
 //Chalkboard Gray:      '#292929'
 //Rustic Gold:          '#886300'
-
+//Dark Walnut:          '#523b00'
 const styles = StyleSheet.create({
     tabBarStyle: {
         activeTintColor: "#990033",

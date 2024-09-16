@@ -1,40 +1,39 @@
 // SignUpScreen.js
 
-import React, {useState} from "react";
-import {View, Text, TextInput, Button, StyleSheet} from "react-native";
+import React, { useState } from "react";
+import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 
 import {auth} from "../../config/firebase.js";
-import PropTypes from "prop-types";
 
-
-const SignUpScreen = ({navigation}) => {
+const SignUpScreen = ({ navigation }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [bio, setBio] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleCreateProfile = () => {
     // Add logic to create the user profile
     // You can send the data to your backend or store it locally, depending on your needs
         createUserWithEmailAndPassword(auth, email, password)
-            .then(userCredential => {
+            .then((userCredential) => {
                 // Signed up
                 const user = userCredential.user;
                 // ...
             })
-            .catch(error => {
+            .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 // ..
+
             });
 
         // For simplicity, let's just log the profile data for now
         console.log("Name:", name);
         console.log("Email:", email);
-        console.log("Bio:", bio);
+        console.log("Password:", password);
 
         // Navigate to the next screen (you can replace 'NextScreen' with your desired screen)
-        navigation.navigate("NextScreen");
+        navigation.navigate("LoginScreen");
     };
 
     return (
@@ -43,7 +42,7 @@ const SignUpScreen = ({navigation}) => {
             <TextInput
                 style={styles.input}
                 value={name}
-                onChangeText={text => setName(text)}
+                onChangeText={(text) => setName(text)}
                 placeholder="Enter your name"
             />
 
@@ -51,26 +50,24 @@ const SignUpScreen = ({navigation}) => {
             <TextInput
                 style={styles.input}
                 value={email}
-                onChangeText={text => setEmail(text)}
+                onChangeText={(text) => setEmail(text)}
                 placeholder="Enter your email"
                 keyboardType="email-address"
             />
 
-            <Text style={styles.label}>Bio:</Text>
+            <Text style={styles.label}>Password:</Text>
             <TextInput
                 style={styles.input}
-                value={bio}
-                onChangeText={text => setBio(text)}
+                value={password}
+                onChangeText={(text) => setPassword(text)}
                 placeholder="Tell us about yourself"
                 multiline
             />
 
             <Button title="Create Profile" onPress={handleCreateProfile} />
+
         </View>
     );
-};
-SignUpScreen.propTypes = {
-    navigation: PropTypes.string.isRequired,
 };
 
 const styles = StyleSheet.create({
